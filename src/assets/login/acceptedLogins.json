@@ -1,0 +1,47 @@
+[
+  {
+    "username": "donald@duck.ch",
+    "password": "quack",
+    "phone": "076 111 22 33",
+    "givenName": "Donald",
+    "familyName": "Duck"
+  },
+  {
+    "username": "test@e.id",
+    "password": "test",
+    "phone": "079 123 45 67",
+    "givenName": "Marianne",
+    "familyName": "Loser",
+    "prefix": "Dr. med."
+  },
+  {
+    "username": "laura@wyss.ch",
+    "password": "laura",
+    "phone": "076 111 22 33",
+    "givenName": "Laura",
+    "familyName": "Wyss",
+    "birthdate": "03.01.1927",
+    "gender": "weiblich",
+    "address": {
+      "street": "Oberdorfstrasse",
+      "street number": "3",
+      "postal code": "4001",
+      "place": "Basel"
+    }
+
+  },
+  {
+    "username": "donald@wyss.ch",
+    "password": "donald",
+    "phone": "076 111 22 33",
+    "givenName": "Donald",
+    "familyName": "Wyss"
+  },
+  {
+    "username": "testtest@wyss.ch",
+    "password": "toto",
+    "phone": "076 111 22 33",
+    "givenName": "Donald",
+    "familyName": "Wyss"
+  }
+]

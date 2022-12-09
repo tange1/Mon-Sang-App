@@ -1,0 +1,1595 @@
+{
+    "resourceType": "Questionnaire",
+    "id": "fragebogen-neuspender",
+    "version": "0.2",
+    "name": "Fragebogen-Neuspender",
+    "title": "Neuspender",
+    "_title": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                "extension": [
+                    {
+                        "url": "lang",
+                        "valueCode": "de"
+                    },
+                    {
+                        "url": "content",
+                        "valueString": "Neuspender"
+                    }
+                ]
+            }
+        ]
+    },
+    "status": "active",
+    "subjectType": [
+        "Patient"
+    ],
+    "publisher": "Roberto Tangarife",
+    "item": [
+        {
+            "linkId": "birthDetails",
+            "text": "Birth details - To be completed by health professional",
+            "type": "group",
+            "item": [
+                {
+                    "linkId": "group",
+                    "type": "group",
+                    "item": [
+                        {
+                            "linkId": "01",
+                            "text": "Vorname",
+                            "type": "string"
+                        },
+                        {
+                            "linkId": "02",
+                            "text": "Geschlecht",
+                            "type": "choice",
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "code": "weiblich"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "männlich"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "divers"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "03",
+                            "text": "What is your date of birth?",
+                            "type": "date"
+                        },
+                        {
+                            "linkId": "04",
+                            "text": "What is your country of birth?",
+                            "type": "string"
+                        },
+                        {
+                            "linkId": "05",
+                            "text": "What is your marital status?",
+                            "type": "string"
+                        }
+
+                    ]
+                }
+            ]
+        },
+        {
+                    "linkId": "100",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": true,
+                    "text": "Sind Sie mindestens 50 kg schwer?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Sind Sie mindestens 50 kg schwer?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "item": [
+                {
+                    "linkId": "1",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": true,
+                    "text": "Haben Sie jemals Blut gespendet?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Haben Sie jemals Blut gespendet?"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "item": [
+                        {
+                            "linkId": "1.1",
+                            "type": "date",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Falls ja, wann letztmals?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Falls ja, wann letztmals?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "linkId": "1.2",
+                            "type": "text",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Wo?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Wo?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": true,
+                    "text": "Sind Sie mindestens 50 kg schwer?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Sind Sie mindestens 50 kg schwer?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "3",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": true,
+                    "text": "Fühlen Sie sich zurzeit gesund?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Fühlen Sie sich zurzeit gesund?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "4",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": true,
+                    "text": "Hatten Sie in den letzten 7 Tagen eine dentalhygienische oder zahnärztliche Behandlung?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Hatten Sie in den letzten 7 Tagen eine dentalhygienische oder zahnärztliche Behandlung?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "5",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Waren Sie in den letzten 4 Wochen in ärztlicher Behandlung oder hatten Sie Fieber über 38°C?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Waren Sie in den letzten 4 Wochen in ärztlicher Behandlung oder hatten Sie Fieber über 38°C?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "6",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Haben Sie in den letzten 4 Wochen Medikamente – auch rezeptfreie – verwendet (z. B.: Tabletten, Spritzen, Zäpfchen)?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Haben Sie in den letzten 4 Wochen Medikamente – auch rezeptfreie – verwendet (z. B.: Tabletten, Spritzen, Zäpfchen)?"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "item": [
+                        {
+                            "linkId": "6.1",
+                            "type": "text",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Welche?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Welche?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Haben Sie in den letzten 4 Wochen Medikamente gegen Prostatavergrösserung oder Haarausfall (z. B. Alocapil®, Finacapil®, Propecia® oder Proscar®) oder gegen Akne (z. B. Roaccutan®, Curakne®, Isotretinoin®, Tretinac® oder Toctino®) eingenommen?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Haben Sie in den letzten 4 Wochen Medikamente gegen Prostatavergrösserung oder Haarausfall (z. B. Alocapil®, Finacapil®, Propecia® oder Proscar®) oder gegen Akne (z. B. Roaccutan®, Curakne®, Isotretinoin®, Tretinac® oder Toctino®) eingenommen?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "8",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Haben Sie in den letzten 4 Monaten Antiretrovirale Therapien/PEP/PrEP (z.B. Truvada®, Isentress®, Prezista/Norvir®) eingenommen?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Haben Sie in den letzten 4 Monaten Antiretrovirale Therapien/PEP/PrEP (z.B. Truvada®, Isentress®, Prezista/Norvir®) eingenommen?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "9",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Haben Sie in den letzten 3 Jahren Neotigason®, Acicutan® (Schuppenflechte) oder Erivedge® (Basalzellkarzinom) eingenommen?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Haben Sie in den letzten 3 Jahren Neotigason®, Acicutan® (Schuppenflechte) oder Erivedge® (Basalzellkarzinom) eingenommen?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "10",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Haben Sie in den letzten 12 Monaten aus Blut hergestellte Medikamente erhalten?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "11",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Haben Sie jemals eine Immuntherapie (Zellen oder Serum menschlichen oder tierischen Ursprungs) erhalten?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Haben Sie jemals eine Immuntherapie (Zellen oder Serum menschlichen oder tierischen Ursprungs) erhalten?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "12",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Wurden Sie in den letzten 12 Monaten gegen Tollwut oder Starrkrampf geimpft?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Wurden Sie in den letzten 12 Monaten gegen Tollwut oder Starrkrampf geimpft?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "13",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Haben Sie in den letzten 4 Wochen andere Impfungen erhalten?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Haben Sie in den letzten 4 Wochen andere Impfungen erhalten?"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "item": [
+                        {
+                            "linkId": "13.1",
+                            "type": "text",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Welche?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Welche?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "linkId": "13.2",
+                            "type": "text",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Wann?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Wann?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "14",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Haben oder hatten Sie eine der folgenden Krankheiten oder Krankheitszeichen? Herz/Kreislauf- oder Lungenerkrankung (z. B. erhöhter / zu tiefer Blutdruck, Herzinfarkt, Atemnot, Hirnschlag, Streifung, Bewusstlosigkeit)?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Haben oder hatten Sie eine der folgenden Krankheiten oder Krankheitszeichen? Herz/Kreislauf- oder Lungenerkrankung (z. B. erhöhter / zu tiefer Blutdruck, Herzinfarkt, Atemnot, Hirnschlag, Streifung, Bewusstlosigkeit)?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "15",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Haut (z. B. Verletzung, Ausschlag, Ekzem, Fieberblase) oder Allergie (z. B. Heuschnupfen, Asthma, Medikamente)?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Haut (z. B. Verletzung, Ausschlag, Ekzem, Fieberblase) oder Allergie (z. B. Heuschnupfen, Asthma, Medikamente)?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "16",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Andere Krankheiten (z. B. Zucker, Blut, Thrombose oder Blutungsneigung, Gefässe, Nieren, Nerven, Epilepsie, Krebs, Osteoporose), Suchtkrankheit (Alkohol, Drogen oder Medikamente)?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Andere Krankheiten (z. B. Zucker, Blut, Thrombose oder Blutungsneigung, Gefässe, Nieren, Nerven, Epilepsie, Krebs, Osteoporose), Suchtkrankheit (Alkohol, Drogen oder Medikamente)?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "17",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Hatten Sie in den letzten 3 Jahren oder seit Ihrer letzten Blutspende eine(n) Spitalaufenthalt Operation oder Unfall?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Hatten Sie in den letzten 3 Jahren oder seit Ihrer letzten Blutspende eine(n) Spitalaufenthalt Operation oder Unfall?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "18",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Wurde Ihnen jemals menschliches oder tierisches Gewebe übertragen oder haben Sie eine Organtransplantation erhalten?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Wurde Ihnen jemals menschliches oder tierisches Gewebe übertragen oder haben Sie eine Organtransplantation erhalten?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "19",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Wurde bei Ihnen jemals eine Operation am Gehirn oder Rückenmark durchgeführt?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Wurde bei Ihnen jemals eine Operation am Gehirn oder Rückenmark durchgeführt?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "20",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Haben Sie vor 1. 1. 1986 Wachstumshormone erhalten?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Haben Sie vor 1. 1. 1986 Wachstumshormone erhalten?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "21",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Ist bei Ihnen oder bei einem Ihrer Blutsverwandten die Creutzfeldt-Jakob-Erkrankung nachgewiesen worden oder besteht ein Verdacht darauf?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ist bei Ihnen oder bei einem Ihrer Blutsverwandten die Creutzfeldt-Jakob-Erkrankung nachgewiesen worden oder besteht ein Verdacht darauf?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "22",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Waren Sie zwischen dem 1. 1. 1980 und dem 31. 12. 1996 für insgesamt 6 Monate oder länger im Vereinigten Königreich (UK) (England, Wales, Schottland, Nordirland, Isle of Man, Kanalinseln, Gibraltar und Falklandinseln)?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Waren Sie zwischen dem 1. 1. 1980 und dem 31. 12. 1996 für insgesamt 6 Monate oder länger im Vereinigten Königreich (UK) (England, Wales, Schottland, Nordirland, Isle of Man, Kanalinseln, Gibraltar und Falklandinseln)?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "23",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Haben Sie seit dem 1. 1. 1980 eine Bluttransfusion erhalten?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Haben Sie seit dem 1. 1. 1980 eine Bluttransfusion erhalten?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "24",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Waren Sie in den letzten 12 Monaten ausserhalb der Schweiz?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Waren Sie in den letzten 12 Monaten ausserhalb der Schweiz?"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "item": [
+                        {
+                            "linkId": "24.1",
+                            "type": "text",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Falls ja, wo?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Falls ja, wo?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "linkId": "24.2",
+                            "type": "text",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Wie lange?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Wie lange?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "linkId": "24.3",
+                            "type": "date",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Seit wann sind Sie zurück?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Seit wann sind Sie zurück?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "linkId": "24.4",
+                            "type": "text",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Hatten Sie dort seit Ihrer Rückkehr Krankheitszeichen (z.B. Fieber)?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Hatten Sie dort seit Ihrer Rückkehr Krankheitszeichen (z.B. Fieber)?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "linkId": "24.5",
+                            "type": "choice",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Wenn ja, hatten Sie dort medizinische oder paramedizinische Eingriffe?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Wenn ja, hatten Sie dort medizinische oder paramedizinische Eingriffe?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "25",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Sind Sie ausserhalb der Schweiz geboren, aufgewachsen oder haben Sie dort mehr als 6 Monate gelebt?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Sind Sie ausserhalb der Schweiz geboren, aufgewachsen oder haben Sie dort mehr als 6 Monate gelebt?"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "item": [
+                        {
+                            "linkId": "25.1",
+                            "type": "text",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Wenn ja, in welchem Land?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Wenn ja, in welchem Land?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "linkId": "25.2",
+                            "type": "date",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Seit wann leben Sie in der Schweiz?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Seit wann leben Sie in der Schweiz?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "26",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Ist Ihre Mutter ausserhalb Europas geboren, aufgewachsen oder hat dort mehr als 6 Monate gelebt?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ist Ihre Mutter ausserhalb Europas geboren, aufgewachsen oder hat dort mehr als 6 Monate gelebt?"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "item": [
+                        {
+                            "linkId": "26.1",
+                            "type": "text",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Wenn ja, in welchem Land?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Wenn ja, in welchem Land?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "27",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Erkrankten Sie in den letzten 6 Monaten an: Toxoplasmose Pfeiffer’schem Drüsenfieber Amöbiasis Schigellose FSME 12 Monaten an: Bilharziose Gonorrhö 2 Jahren an: Osteomyelitis Rheumatischem Fieber Tuberkulose Rückfallfieber Guillain-Barré-Syndrom",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Erkrankten Sie in den letzten 6 Monaten an: Toxoplasmose Pfeiffer’schem Drüsenfieber Amöbiasis Schigellose FSME 12 Monaten an: Bilharziose Gonorrhö 2 Jahren an: Osteomyelitis Rheumatischem Fieber Tuberkulose Rückfallfieber Guillain-Barré-Syndrom"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "28",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Erkrankten Sie jemals an: Malaria Chagas Brucellose Echinokokkose Leishmaniose Lymphogranuloma venereum Filariose Q-Fieber Babesiose Ebola",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Erkrankten Sie jemals an: Malaria Chagas Brucellose Echinokokkose Leishmaniose Lymphogranuloma venereum Filariose Q-Fieber Babesiose Ebola"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "item": [
+                        {
+                            "linkId": "28.1",
+                            "type": "date",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Wenn ja, wann?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Wenn ja, wann?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "29",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Hatten Sie jemals eine andere schwere Infektionskrankheit?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Hatten Sie jemals eine andere schwere Infektionskrankheit?"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "item": [
+                        {
+                            "linkId": "29.1",
+                            "type": "text",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Wenn ja: Welche?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Wenn ja: Welche?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "linkId": "29.2",
+                            "type": "date",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Wann?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Wann?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "30",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Hatten Sie in den letzten 4 Wochen einen Zeckenstich oder Kontakt mit Infektionskrankheiten?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Hatten Sie in den letzten 4 Wochen einen Zeckenstich oder Kontakt mit Infektionskrankheiten?"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "item": [
+                        {
+                            "linkId": "30.1",
+                            "type": "text",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Falls ja, welche?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Falls ja, welche?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "31",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Hatten Sie in den letzten 4 Monaten: eine Magen-/Darmspiegelung eine Akupunkturbehandlung eine elektrische Haarentfernung (Nadelepilation) eine Tätowierung kosmetische Behandlungen wie Permanent-Make-up oder Mikroblading ein Piercing Kontakt mit Fremdblut (Nadelstichverletzung, Blutspritzer in Augen, Mund oder anderes)?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Hatten Sie in den letzten 4 Monaten: eine Magen-/Darmspiegelung eine Akupunkturbehandlung eine elektrische Haarentfernung (Nadelepilation) eine Tätowierung kosmetische Behandlungen wie Permanent-Make-up oder Mikroblading ein Piercing Kontakt mit Fremdblut (Nadelstichverletzung, Blutspritzer in Augen, Mund oder anderes)?"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "item": [
+                        {
+                            "linkId": "31.1",
+                            "type": "date",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Wenn ja: Wann?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Wenn ja: Wann?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "linkId": "31.2",
+                            "type": "text",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Wo?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Wo?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "32",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Haben Sie jemals eine Gelbsucht (Hepatitis) durchgemacht oder einen positiven Hepatitis-Test gehabt?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Haben Sie jemals eine Gelbsucht (Hepatitis) durchgemacht oder einen positiven Hepatitis-Test gehabt?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "33",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Ist Ihr/Ihre Sexualpartner/in in den letzten 3 Monaten an Zika erkrankt?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ist Ihr/Ihre Sexualpartner/in in den letzten 3 Monaten an Zika erkrankt?"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "34",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Treffen eine oder mehrere der folgenden Risikosituationen für Sie zu? Wenn ja, welche? Wechsel oder neue Sexualpartnerschaft in den letzten 4 Monaten. Sexueller Kontakt (geschützt oder nicht geschützt) mit wechselnden Partner/innen (mehr als zwei) in den letzten 4 Monaten",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Treffen eine oder mehrere der folgenden Risikosituationen für Sie zu? Wenn ja, welche? Wechsel oder neue Sexualpartnerschaft in den letzten 4 Monaten. Sexueller Kontakt (geschützt oder nicht geschützt) mit wechselnden Partner/innen (mehr als zwei) in den letzten 4 Monaten"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "35",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Sexueller Kontakt unter Einfluss synthetischer Drogen in den letzten 12 Monaten sexuelle Kontakte unter Annahme von Geld, Drogen oder Medikamenten in den letzten 12 Monaten Injektion von Drogen, früher oder gegenwärtig Positiver Test für HIV (AIDS), Syphilis oder Gelbsucht (Hepatitis B oder C) Lebens-, Sexual- oder Wohnpartner/in ist in den letzten 6 Monaten an einer Gelbsucht erkrankt.",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Sexueller Kontakt unter Einfluss synthetischer Drogen in den letzten 12 Monaten sexuelle Kontakte unter Annahme von Geld, Drogen oder Medikamenten in den letzten 12 Monaten Injektion von Drogen, früher oder gegenwärtig Positiver Test für HIV (AIDS), Syphilis oder Gelbsucht (Hepatitis B oder C) Lebens-, Sexual- oder Wohnpartner/in ist in den letzten 6 Monaten an einer Gelbsucht erkrankt."
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "36",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Haben Sie in den letzten 4 Monaten sexuellen Kontakt mit Partner/innen gehabt, die sich in HIV-HCV-HBV-Risikoländern für mehr als 6 Monate aufgehalten haben oder dort Bluttransfusionen erhalten haben?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Haben Sie in den letzten 4 Monaten sexuellen Kontakt mit Partner/innen gehabt, die sich in HIV-HCV-HBV-Risikoländern für mehr als 6 Monate aufgehalten haben oder dort Bluttransfusionen erhalten haben?"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "item": [
+                        {
+                            "linkId": "36.1",
+                            "type": "date",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Datum der Rückkehr des/r Partners/in:",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Datum der Rückkehr des/r Partners/in:"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "37",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Nur Männer: Jemals sexueller Kontakt unter Männern, sexueller Kontakt unter Männern in den letzten 12 Monaten",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Nur Männer: Jemals sexueller Kontakt unter Männern, sexueller Kontakt unter Männern in den letzten 12 Monaten"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "linkId": "38",
+                    "type": "choice",
+                    "repeats": false,
+                    "required": false,
+                    "text": "Nur Frauen: Waren Sie jemals schwanger?",
+                    "_text": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Nur Frauen: Waren Sie jemals schwanger?"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "item": [
+                        {
+                            "linkId": "38.1",
+                            "type": "date",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Falls ja, wann zuletzt?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Falls ja, wann zuletzt?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "linkId": "38.2",
+                            "type": "choice",
+                            "repeats": false,
+                            "required": false,
+                            "text": "Haben Sie vor dem 01.01.1986 Hormonspritzen zur Behandlung von Unfruchtbarkeit erhalten?",
+                            "_text": {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                        "extension": [
+                                            {
+                                                "url": "lang",
+                                                "valueCode": "de"
+                                            },
+                                            {
+                                                "url": "content",
+                                                "valueString": "Haben Sie vor dem 01.01.1986 Hormonspritzen zur Behandlung von Unfruchtbarkeit erhalten?"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
