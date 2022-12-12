@@ -27,8 +27,7 @@ import QuestionComponent from '../components/Question.vue';
 import NEUSPENDER from '../assets/questionnaires/neuspender.json';
 import { Questionnaire, Bundle, BundleType, Patient } from '@i4mi/fhir_r4';
 import { QuestionnaireData } from '@i4mi/fhir_questionnaire';
-import { Iti65DocumentBundle, useITI65 } from '@i4mi/mhealth-proto-components/lib/utils/epdPlaygroundUtils';
-import { createIti65Bundle, Iti65Metadata, SystemCodeExtension } from '@i4mi/mhealth-proto-components/lib/utils/fhirUtils';
+import { Iti65DocumentBundle, useITI65, createIti65Bundle, Iti65Metadata, SystemCodeExtension } from '@i4mi/mhealth-proto-components';
 
 
 export default defineComponent({
@@ -93,7 +92,7 @@ export default defineComponent({
         //authorRole: ITI_65_AUTHOR_ROLE.PAT
 
       } as Iti65Metadata;
-      this.$fhirUtils.createIti65Bundle(this.$store.getUser, new File([JSON.stringify(this.response)], this.qData + '.json',
+      this.$fhirUtils.createIti65Bundle(this.$store.getUser(), new File([JSON.stringify(this.response)], 'Fragebogen.json',
         {
           type: 'application/fhir+json'
         }), metadata).then((result) => this.$epdUtils.useITI65(result))

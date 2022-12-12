@@ -51,6 +51,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
 import { LoginType, UIMessage, UIMessageType } from '../model/interfaces';
+//import EpdPlaygroundUtils, { Iti78Params } from '@i4mi/mhealth-proto-components/src/utils/epdPlaygroundUtils';
 
 /**
 function generateCode(length: number): string {
@@ -124,6 +125,37 @@ export default defineComponent({
         this.invalidPassword = true;
       }
     },
+
+    /*
+    search(e: Event) {
+      e.preventDefault();
+      this.patients = [];
+      const searchParams: Partial<Iti78Params> = {}
+      if (this.givenName.length > 0) searchParams.given = this.givenName;
+      if (this.familyName.length > 0) searchParams.family = this.familyName;
+      if (this.birthDate.length > 0) searchParams.birthdate = this.birthDate;
+      //if (this.gender.toLocaleLowerCase() != PatientAdministrativeGender.UNKNOWN) searchParams.gender = this.gender;
+      //if (this.localId.length > 0) searchParams.identifier = this.$props.localIdSystem.urn + '|' + this.localId
+      this.loading = true;
+      this.epdPlaygroundUtils.useITI78(searchParams)
+        .then((result) => {
+          this.patients = result;
+          this.notFound = result.length === 0;
+        })
+        .catch((e: Error) => {
+          this.patients = [];
+          if (e.message.toLowerCase().indexOf('not found')) {
+            this.notFound = true;
+          } else {
+            console.log('Error:', e.message);
+          }
+        })
+        .finally(() => {
+          this.loading = false;
+        });
+    },
+    */
+
     /**
     checkCode(e: Event) {
       e.preventDefault();
