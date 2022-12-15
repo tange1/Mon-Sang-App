@@ -1,23 +1,32 @@
 <template>
-  <br />
   <q-page padding>
-    <div v-if="qData !== undefined">
-      <QuestionComponent v-for="question in qData.getQuestions()" :key="question.id" :question="question"
-        :language="lang" :onAnswer="qData.updateQuestionAnswers" :isSelected="qData.isAnswerOptionSelected" />
-    </div>
+    <q-card>
+      <div v-if="qData !== undefined">
+        <QuestionComponent v-for="question in qData.getQuestions()" :key="question.id" :question="question"
+          :language="lang" :onAnswer="qData.updateQuestionAnswers" :isSelected="qData.isAnswerOptionSelected" />
+      </div>
 
-    <!-- Buttons am Ende des Fragebogens -->
-    <button :disabled="!qData" @click="qData?.resetResponse()">
-      zurücksetzen
-    </button>
-    <button @click="setAnswers">Antworten speichern</button>
+      <!-- Buttons am Ende des Fragebogens -->
+      <q-separator inset></q-separator>
+      <q-card-section>
+        <q-btn :disabled="!qData" @click="qData?.resetResponse()" class="full-width" color="primary">Antworten
+          zurücksetzen</q-btn>
+        <q-separator inset></q-separator>
+        <q-btn @click="setAnswers" class="full-width" color="primary">Antworten speichern</q-btn>
+      </q-card-section>
 
-    <!-- RESPONSE MODAL-->
-    <div v-if="response" class="modal" id="response-modal">
-      <p>Hier ist die QuestionnaireResponse-Resource:</p>
-      <textarea v-model="response"></textarea>
-      <button @click="response = undefined">schliessen</button>
-    </div>
+      <!--button :disabled="!qData" @click="qData?.resetResponse()">
+        zurücksetzen
+      </button>
+      <button @click="setAnswers">Antworten speichern</button-->
+
+      <!-- RESPONSE MODAL-->
+      <div v-if="response" class="modal" id="response-modal">
+        <p>Hier ist die QuestionnaireResponse-Resource:</p>
+        <textarea v-model="response"></textarea>
+        <button @click="response = undefined">schliessen</button>
+      </div>
+    </q-card>
   </q-page>
 </template>
 

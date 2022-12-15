@@ -81,6 +81,7 @@ export default defineComponent({
       } as LoginType,
       invalidPassword: false,
       invalidCode: false,
+
     };
   },
 
@@ -126,7 +127,7 @@ export default defineComponent({
       }
     },
 
-    /*
+
     search(e: Event) {
       e.preventDefault();
       this.patients = [];
@@ -154,7 +155,21 @@ export default defineComponent({
           this.loading = false;
         });
     },
-    */
+    /**
+     * Method for selecting a patient from the table. Emits the event to the
+     * parent component, and resets the search if specified so in the options.
+     */
+    select(_: Event, pat: Patient): void {
+      this.$emit('found-patient', pat);
+      if (this.$props.options && this.$props.options.resetOnSelect) {
+        this.givenName = '';
+        this.familyName = '';
+        this.birthDate = '';
+        this.gender = PatientAdministrativeGender.UNKNOWN;
+        this.localId = '';
+        this.patients = [];
+      }
+    }
 
     /**
     checkCode(e: Event) {

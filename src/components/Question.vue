@@ -1,86 +1,50 @@
 <template>
-  <div
-    v-if="question.isEnabled"
-    :class="
-      'question ' +
-      'question-' +
-      question.type +
-      (question.isInvalid ? ' invalid' : '')
-    "
-  >
+  <div v-if="question.isEnabled" :class="
+    'question ' +
+    'question-' +
+    question.type +
+    (question.isInvalid ? ' invalid' : '')
+  ">
     <h2>
       {{
-        (question.prefix ? question.prefix + ': ' : '') +
-        question.label[language]
+          (question.prefix ? question.prefix + ': ' : '') +
+          question.label[language]
       }}
     </h2>
     <!-- CHOICE Question -->
     <ul v-if="question.type === 'choice'">
-      <li
-        v-for="answer in question.answerOptions"
-        :key="question.id + '-' + answer.code"
-        @click="onAnswer(question, answer)"
-      >
-        <input
-          :type="question.allowsMultipleAnswers ? 'checkbox' : 'radio'"
-          :checked="isSelected(question, answer)"
-          :name="question.id"
-          :id="answer.code.toString()"
-        />
+      <li v-for="answer in question.answerOptions" :key="question.id + '-' + answer.code"
+        @click="onAnswer(question, answer)">
+        <input :type="question.allowsMultipleAnswers ? 'checkbox' : 'radio'" :checked="isSelected(question, answer)"
+          :name="question.id" :id="answer.code.toString()" />
         <label for="answer.code.toString()">{{
-          answer.answer[language]
+            answer.answer[language]
         }}</label>
       </li>
     </ul>
     <!-- STRING | DECIMAL Question -->
-    <input
-      v-if="question.type === 'string' || question.type === 'decimal'"
-      v-model="value"
-      @change="updateValue(value, question.type)"
-    />
+    <q-input v-if="question.type === 'string' || question.type === 'decimal'" v-model="value"
+      @change="updateValue(value, question.type)" />
 
     <!-- INTEGER Question -->
-    <input
-      v-if="question.type === 'integer'"
-      v-model="value"
-      type="number"
-      @change="updateValue(value, question.type)"
-    />
+    <q-input v-if="question.type === 'integer'" v-model="value" type="number"
+      @change="updateValue(value, question.type)" />
 
     <!-- DATE Question -->
-    <input
-      v-if="question.type === 'date'"
-      v-model="value"
-      type="date"
-      @change="updateValue(value, question.type)"
-    />
+    <q-input v-if="question.type === 'date'" v-model="value" type="date" @change="updateValue(value, question.type)" />
 
     <!-- TEXT Question -->
-    <textarea
-      v-if="question.type === 'text'"
-      v-model="value"
-      @change="updateValue(value, question.type)"
-    >
+    <textarea v-if="question.type === 'text'" v-model="value" @change="updateValue(value, question.type)">
     </textarea>
 
     <!-- BOOLEAN Question -->
-    <input
-      v-if="question.type === 'boolean'"
-      type="checkbox"
-      v-model="booleanValue"
-      @change="updateValue(booleanValue, question.type)"
-    />
+    <input v-if="question.type === 'boolean'" type="checkbox" v-model="booleanValue"
+      @change="updateValue(booleanValue, question.type)" />
 
     <!-- SUB Questions-->
     <div v-if="question.subItems && question.subItems.length > 0">
-      <QuestionComponent
-        v-for="subquestion of question.subItems"
-        :question="subquestion"
-        :key="subquestion.id"
-        :isSelected="isSelected"
-        :onAnswer="onAnswer"
-        :language="language"
-      />
+      <QuestionComponent v-for="subquestion of question.subItems" :question="subquestion" :key="subquestion.id"
+        :isSelected="isSelected" :onAnswer="onAnswer" :language="language" />
     </div>
   </div>
 </template>
@@ -164,9 +128,11 @@ export default defineComponent({
   padding: 0.3em 0.5em;
   margin-bottom: 0.5em;
 }
+
 .question-display {
   border-left: unset;
 }
+
 .question h2 {
   font-size: 1em;
   line-height: 1.2em;
@@ -188,13 +154,16 @@ export default defineComponent({
   list-style: none;
   padding-left: 0.5em;
 }
+
 .question-choice li {
   cursor: pointer;
   margin-bottom: 0.5em;
 }
+
 .question-choice input {
   cursor: pointer;
 }
+
 .question-choice label {
   margin-left: 0.5em;
   cursor: pointer;

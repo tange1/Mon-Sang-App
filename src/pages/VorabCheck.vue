@@ -1,6 +1,6 @@
 <template>
   <div padding>
-    <q-form class="q-gutter-md">
+    <q-form @submit="onSubmit" class="q-gutter-md">
       <div id="q-app" style="min-height: 100vh;">
         <div class="q-pa-md row items-start q-gutter-md">
 
@@ -103,7 +103,14 @@
                 ]"></q-btn-toggle>
             </q-card-section>
 
+            <q-separator inset></q-separator>
+
+            <q-card-section>
+              <q-btn label="Prüfe deine Antworten" class="full-width" type="submit" color="primary"></q-btn>
+            </q-card-section>
+
           </q-card>
+
         </div>
       </div>
 

@@ -2,6 +2,7 @@
   <q-layout view="lHh Lpr lFf">
 
     <!-- Header -->
+    <!-- https://www.geeksforgeeks.org/how-to-convert-the-hamburger-icon-of-navigation-menu-to-x-on-click/ -->
     <q-header elevated>
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="" @click="toggleLeftDrawer" />
@@ -14,17 +15,6 @@
           <img src="../assets/logo/logo_3.png">
         </q-avatar>
 
-
-        <!--div v-if="user.givenName" @click="logout">
-          Logout
-          <q-icon name="fas fa-user-md" id="user-icon" />
-        </div-->
-        <!--div v-if="user.givenName" @click="logout">
-          {{ (user.prefix ? user.prefix : '') +
-            ' ' + user.givenName +
-            ' ' + user.familyName }}
-          <q-icon name="fas fa-user-md" id="user-icon" />
-        </div-->
       </q-toolbar>
     </q-header>
 

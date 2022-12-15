@@ -13,7 +13,8 @@
   "dependencies": {
     "@i4mi/fhir_questionnaire": "^0.1.0",
     "@i4mi/fhir_r4": "^2.0.0",
-    "@i4mi/mhealth-proto-components": "^0.3.4",
+    //"@i4mi/mhealth-proto-components": "^0.3.4",
+    "@i4mi/mhealth-proto-components": "^0.4.2-beta.1",
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.6.5",
     "i18n": "^0.15.1",
