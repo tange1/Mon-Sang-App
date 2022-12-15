@@ -134,7 +134,7 @@ export default defineComponent({
       const searchParams: Partial<Iti78Params> = {}
       if (this.givenName.length > 0) searchParams.given = this.givenName;
       if (this.familyName.length > 0) searchParams.family = this.familyName;
-      if (this.birthDate.length > 0) searchParams.birthdate = this.birthDate;
+      //if (this.birthDate.length > 0) searchParams.birthdate = this.birthDate;
       //if (this.gender.toLocaleLowerCase() != PatientAdministrativeGender.UNKNOWN) searchParams.gender = this.gender;
       //if (this.localId.length > 0) searchParams.identifier = this.$props.localIdSystem.urn + '|' + this.localId
       this.loading = true;
