@@ -52,7 +52,7 @@
 <script lang="ts">
 import { QuestionnaireItemType } from '@i4mi/fhir_r4';
 import { defineComponent } from 'vue';
-import { IAnswerOption } from '@i4mi/fhir_questionnaire';
+import { IAnswerOption, IQuestion } from '@i4mi/fhir_questionnaire';
 
 export default defineComponent({
   name: 'QuestionComponent',
@@ -79,6 +79,13 @@ export default defineComponent({
       type: String,
       required: true,
     },
+  },
+  beforeMount() {
+    const question = this.$props.question as IQuestion;
+    if (question.type === QuestionnaireItemType.STRING && question.selectedAnswers.length > 0) {
+      this.value = question.selectedAnswers[0] as unknown as string;
+    }
+
   },
   methods: {
     updateValue(value: string | number | boolean, type: QuestionnaireItemType) {

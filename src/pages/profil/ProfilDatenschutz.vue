@@ -21,7 +21,10 @@
         <q-toggle v-model="dense" label="Dense QInput" />
 
         <h5>Personalien</h5>
-        <q-input v-model="text" label="Nachname" disable :dense="dense"></q-input>
+        <q-input v-model="text" label="Nachname" disable :dense="dense">{{ (user.prefix ? user.prefix : '') + ' ' +
+            user.givenName + ' ' +
+            user.familyName
+        }}</q-input>
         <q-input v-model="text" label="Vorname" :dense="dense"></q-input>
         <q-input v-model="text" label="Geburtsname" :dense="dense"></q-input>
         <q-input v-model="text" label="Geburtsdatum" :dense="dense"></q-input>
@@ -60,6 +63,7 @@
 </template>
 
 <script lang="ts">
+import { LoginType } from 'src/model/interfaces';
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
@@ -69,7 +73,11 @@ export default defineComponent({
       text: ref(''),
       ph: ref(''),
       dense: ref(true),
+      user: {} as LoginType,
     };
+  },
+  mounted() {
+    this.user = this.$store.getUser() || ({} as LoginType);
   },
 });
 </script>

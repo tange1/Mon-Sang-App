@@ -106,7 +106,20 @@
             <q-separator inset></q-separator>
 
             <q-card-section>
-              <q-btn label="Prüfe deine Antworten" class="full-width" type="submit" color="primary"></q-btn>
+              <q-btn label="Prüfe deine Antworten" class="full-width" color="primary" @click="confirm = true"></q-btn>
+              <q-dialog v-model="confirm" persistent>
+                <q-card>
+                  <q-card-section class="row items-center">
+                    <q-avatar icon="report" color="primary" text-color="white"></q-avatar>
+                    <span class="q-ml-sm">Das sieht gut aus! Du kannst bald demnächst spenden.</span>
+                  </q-card-section>
+                  <q-card-actions align="right">
+                    <q-btn class="full-width" label="Abbrechen" color="secondary" v-close-popup></q-btn>
+                    <q-btn class="full-width" label="Weiter zur Terminvereinbarung" color="secondary"
+                      v-close-popup></q-btn>
+                  </q-card-actions>
+                </q-card>
+              </q-dialog>
             </q-card-section>
 
           </q-card>
@@ -120,7 +133,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   name: 'PageIndex',
@@ -136,8 +149,7 @@ export default defineComponent({
       question_7: (''),
       question_8: (''),
       question_9: (''),
-
-
+      confirm: ref(false),
     }
   }
 })

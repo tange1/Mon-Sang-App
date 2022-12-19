@@ -1,25 +1,13 @@
 <template>
   <q-page padding>
     <div class="q-pa-md">
-      <q-carousel
-        v-model="slide"
-        transition-prev="slide-right"
-        transition-next="slide-left"
-        animated
-        control-color="primary"
-        class="rounded-borders"
-      >
+      <q-carousel v-model="slide" transition-prev="slide-right" transition-next="slide-left" animated
+        control-color="primary" class="rounded-borders">
         <!-- 1. Carousel -->
         <q-carousel-slide name="style" class="column no-wrap flex-center">
           <div v-if="qData !== undefined">
-            <QuestionComponent
-              v-for="question in qData.getQuestions()"
-              :key="question.id"
-              :question="question"
-              :language="lang"
-              :onAnswer="qData.updateQuestionAnswers"
-              :isSelected="qData.isAnswerOptionSelected"
-            />
+            <QuestionComponent v-for="question in qData.getQuestions()" :key="question.id" :question="question"
+              :language="lang" :onAnswer="qData.updateQuestionAnswers" :isSelected="qData.isAnswerOptionSelected" />
           </div>
           <div class="q-mt-md text-center">
             {{ qData.fhirQuestionnaire.id }}
@@ -46,28 +34,18 @@
       </q-carousel>
 
       <div class="row justify-center">
-        <q-btn-toggle
-          glossy
-          v-model="slide"
-          :options="[
-            { label: 1, value: 'style' },
-            { label: 2, value: 'tv' },
-            { label: 3, value: 'layers' },
-            { label: 4, value: 'map' },
-          ]"
-        />
+        <q-btn-toggle glossy v-model="slide" :options="[
+          { label: 1, value: 'style' },
+          { label: 2, value: 'tv' },
+          { label: 3, value: 'layers' },
+          { label: 4, value: 'map' },
+        ]" />
       </div>
     </div>
 
     <div v-if="qData !== undefined">
-      <QuestionComponent
-        v-for="question in qData.getQuestions()"
-        :key="question.id"
-        :question="question"
-        :language="lang"
-        :onAnswer="qData.updateQuestionAnswers"
-        :isSelected="qData.isAnswerOptionSelected"
-      />
+      <QuestionComponent v-for="question in qData.getQuestions()" :key="question.id" :question="question"
+        :language="lang" :onAnswer="qData.updateQuestionAnswers" :isSelected="qData.isAnswerOptionSelected" />
     </div>
 
     <!-- Buttons am Ende des Fragebogens -->
@@ -75,6 +53,26 @@
       zurücksetzen
     </button>
     <button @click="setAnswers">Antworten speichern</button>
+
+    <div id="q-app" style="min-height: 100vh;">
+      <div class="q-pa-md q-gutter-sm">
+        <q-btn label="Antworten speichern" color="primary" @click="confirm = true"></q-btn>
+        <q-dialog v-model="confirm" persistent>
+          <q-card>
+            <q-card-section class="row items-center">
+              <q-avatar icon="report" color="primary" text-color="white"></q-avatar>
+              <span class="q-ml-sm">Dein Fragebogen wird im EPD Playground abgelegt und in einem QR-Code
+                verpackt.</span>
+            </q-card-section>
+
+            <q-card-actions align="right">
+              <q-btn flat label="Abbrechen" color="primary" v-close-popup></q-btn>
+              <q-btn flat label="Bestätigen" color="primary" v-close-popup></q-btn>
+            </q-card-actions>
+          </q-card>
+        </q-dialog>
+      </div>
+    </div>
 
     <!-- RESPONSE MODAL-->
     <div v-if="response" class="modal" id="response-modal">
@@ -100,6 +98,7 @@ export default defineComponent({
     return {
       slide: ref('style'),
       lorem: 'text text text ...',
+      confirm: ref(false)
     };
   },
   data() {

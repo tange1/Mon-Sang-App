@@ -20,6 +20,7 @@
     "phone": "076 111 22 33",
     "givenName": "Laura",
     "familyName": "Wyss",
+    "maidenName": "Wyss",
     "birthdate": "03.01.1927",
     "gender": "weiblich",
     "address": {
@@ -27,7 +28,8 @@
       "street number": "3",
       "postal code": "4001",
       "place": "Basel"
-    }
+    },
+    "bloodGroup": "0+"
 
   },
   {

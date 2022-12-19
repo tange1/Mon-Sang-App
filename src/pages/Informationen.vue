@@ -4,8 +4,9 @@
       <q-card class="my-card">
         <q-card-section horizontal>
 
-          <q-card-section @click="$router.push('/testpage')">
+          <q-card-section @click="$router.push('/vorblutspende')">
             <q-card-section class="card-title">Vor der Blutspende</q-card-section>
+
             <q-card-section>
               <p>So bereite ich mich optimal auf die Blut- spende vor.</p>
             </q-card-section>
@@ -13,7 +14,7 @@
 
           <q-separator vertical></q-separator>
 
-          <q-card-section>
+          <q-card-section @click="$router.push('/nachblutspende')">
             <q-card-section class="card-title">Nach der Blutspende</q-card-section>
             <q-card-section>
               <p>Auf folgendes muss ich nach der Blutspende achten.</p>

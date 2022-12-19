@@ -45,7 +45,7 @@ export default defineComponent({
         toast();
       });
       if (user) {
-        // fetch patient data from EPD Playground
+        // Patientendaten aus dem EPD Playground abrufen.
         this.$epdUtils
           .useITI78({
             given: user.givenName,

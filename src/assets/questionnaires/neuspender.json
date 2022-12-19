@@ -734,7 +734,7 @@
           "item": [
             {
               "linkId": "Q6.1",
-              "type": "text",
+              "type": "string",
               "repeats": false,
               "required": false,
               "text": "Welche?",
@@ -1290,7 +1290,7 @@
           "item": [
             {
               "linkId": "Q24.1",
-              "type": "text",
+              "type": "string",
               "repeats": false,
               "required": false,
               "text": "Falls ja, wo?",
@@ -1324,7 +1324,7 @@
             },
             {
               "linkId": "Q24.2",
-              "type": "text",
+              "type": "string",
               "repeats": false,
               "required": false,
               "text": "Wie lange?",
@@ -1489,7 +1489,7 @@
           "item": [
             {
               "linkId": "Q25.1",
-              "type": "text",
+              "type": "string",
               "repeats": false,
               "required": false,
               "text": "Wenn ja, in welchem Land?",
@@ -1584,7 +1584,7 @@
           "item": [
             {
               "linkId": "Q26.1",
-              "type": "text",
+              "type": "string",
               "repeats": false,
               "required": false,
               "text": "Wenn ja, in welchem Land?",
@@ -1731,7 +1731,7 @@
           "item": [
             {
               "linkId": "Q29.1",
-              "type": "text",
+              "type": "string",
               "repeats": false,
               "required": false,
               "text": "Wenn ja: Welche?",
@@ -1826,7 +1826,7 @@
           "item": [
             {
               "linkId": "Q30.1",
-              "type": "text",
+              "type": "string",
               "repeats": false,
               "required": false,
               "text": "Falls ja, welche?",
@@ -1921,7 +1921,7 @@
             },
             {
               "linkId": "Q31.2",
-              "type": "text",
+              "type": "string",
               "repeats": false,
               "required": false,
               "text": "Wo?",
