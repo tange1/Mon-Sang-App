@@ -42,20 +42,7 @@
         </q-card>
       </div>
 
-      <!-- 3. Card: Fragebogen (Variante 2)>
-      <div class="col-6">
-        <q-card class="link-card" @click="$router.push('/testpage')">
-          <q-card-section class="card-title">Fragebogen gruppiert ausfüllen</q-card-section>
-          <q-card-section>
-            <p>
-              Starte jetzt mit dem Fragebogen. Nach dem Ausfüllen wird ein
-              QR-Code generiert, den Du dann im Blutspendezentrum vorweisen
-              kannst. Bitte denke daran, dass dieser QR-Code nur 48 gültig sein
-              wird.
-            </p>
-          </q-card-section>
-        </q-card>
-      </div-->
+
     </div>
   </q-page>
 </template>

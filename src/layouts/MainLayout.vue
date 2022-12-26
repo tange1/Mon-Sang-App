@@ -20,14 +20,21 @@
 
     <!-- Left Drawer -->
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+
       <q-list>
 
-        <q-item-label header>Herzlich Willkommen
-          <div class="text-weight-bold">{{ (user.prefix ? user.prefix : '') + ' ' + user.givenName + ' ' +
-              user.familyName
-          }}</div>
+
+
+        <q-item-label header class="q-mt-xs text-body2 text-weight-bold text-primary text-uppercase">Herzlich Willkommen
+          <div backgroundcolor="primary">
+            {{ (user.prefix ? user.prefix : '') + ' ' + user.givenName + ' ' +
+                user.familyName
+            }}
+          </div>
+
         </q-item-label>
 
+        <q-separator spaced inset />
         <q-item clickable v-ripple to="/datenschutz">
           <q-item-section avatar>
             <q-icon name="lock"></q-icon>
@@ -36,8 +43,8 @@
             Datenschutz
           </q-item-section>
         </q-item>
-
-        <q-item clickable v-ripple to="/home">
+        <q-separator spaced inset />
+        <q-item clickable v-ripple to="/impressum">
           <q-item-section avatar>
             <q-icon name="verified_user"></q-icon>
           </q-item-section>
@@ -45,6 +52,8 @@
             Impressum
           </q-item-section>
         </q-item>
+
+        <q-separator spaced inset />
 
         <q-item clickable v-ripple v-if="user.givenName" @click="logout">
           <q-item-section avatar>
@@ -55,9 +64,11 @@
           </q-item-section>
         </q-item>
 
-        <q-item v-for="entry in menuEntries" :key="entry.to">
+        <q-separator spaced inset />
+
+        <!--q-item v-for="entry in menuEntries" :key="entry.to">
           <q-icon v-if="entry.icon" :name="'fas fa-' + entry.icon" class="menu-icon" />
-          <!--router-link :to="entry.to" class="menu-link">{{ $t('layout.menu.' + entry.translateString) }}</router-link-->
+          <router-link :to="entry.to" class="menu-link">{{ $t('layout.menu.' + entry.translateString) }}</router-link>
           <router-link :to="entry.to" class="menu-link">Link</router-link>
         </q-item>
         <q-item>
@@ -65,7 +76,7 @@
             Logout
             <q-icon name="fas fa-user-md" id="user-icon" />
           </div>
-        </q-item>
+        </q-item-->
       </q-list>
     </q-drawer>
 
@@ -102,18 +113,7 @@ export default defineComponent({
     return {
       leftDrawerOpen: false,
       user: {} as LoginType,
-      menuEntries: [
-        {
-          to: '/',
-          translateString: 'home',
-          icon: 'home',
-        },
-        {
-          to: '/meinprofil',
-          translateString: 'Mein_profil',
-          icon: 'users',
-        },
-      ] as MenuEntry[],
+
     };
   },
 
@@ -124,8 +124,9 @@ export default defineComponent({
     toggleLeftDrawer() {
       this.leftDrawerOpen = !this.leftDrawerOpen;
     },
+
     logout() {
-      if (confirm('Möchten Sie sich wirklich ausloggen?')) {
+      if (confirm('Möchten Sie sich wirklich ausloggen? Really')) {
         this.$store.logoutUser();
         location.reload();
       }

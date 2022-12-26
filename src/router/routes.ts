@@ -82,6 +82,10 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/InfoPages/NachBlutspende.vue')
       },
       {
+        path: 'impressum',
+        component: () => import('pages/Impressum.vue')
+      },
+      {
         path: '/testpage',
         component: () => import('src/pages/TestPage.vue'),
       },

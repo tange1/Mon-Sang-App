@@ -1,5 +1,6 @@
 import { Patient } from '@i4mi/fhir_r4';
-import { LoginType } from 'src/model/interfaces';
+import { LoginType, Settings } from 'src/model/interfaces';
+import { APP_LANGUAGES } from 'src/boot/i18n';
 
 /**
  * storeService.ts
@@ -11,7 +12,7 @@ const STORAGE_KEY = 'EPD_USE_CASES_PT1';
 
 interface LocalStoreObject {
   localPatients: Patient[];
-  //settings: Settings;
+  settings: Settings;
   patient: Patient;
   oids: Oids;
 }
@@ -32,7 +33,7 @@ export default class Store {
   private user: LoginType | undefined;
   private patient: Patient = { resourceType: 'Patient' };
   private localPatients = new Array<Patient>();
-  //private settings = this.getDefaultSettings();
+  private settings = this.getDefaultSettings();
   private oids = this.getDefaultOids();
 
   constructor() {
@@ -53,7 +54,7 @@ export default class Store {
       const storage = JSON.parse(local) as LocalStoreObject;
       this.localPatients = storage.localPatients;
       this.patient = storage.patient;
-      //this.settings = storage.settings || this.getDefaultSettings();
+      this.settings = storage.settings || this.getDefaultSettings();
       this.oids = storage.oids || this.getDefaultOids();
     }
   }
@@ -74,7 +75,7 @@ export default class Store {
       JSON.stringify({
         localPatients: this.localPatients,
         patient: this.patient,
-        //settings: this.settings,
+        settings: this.settings,
         oids: this.oids,
       })
     );
@@ -99,23 +100,25 @@ export default class Store {
   /**
    * Sets the settings property
    * @param _settings the settings
+   */
   setSettings(_settings: Settings) {
     this.settings = _settings;
     this.persistToStorage();
   }
-  */
 
   /**
    * Gets the settings from the store
    * @returns  the persisted settings
+   */
   getSettings(): Settings {
     return this.settings;
   }
-  */
 
   /**
    * Gets the default settings
    * @returns  a set of default settings
+   */
+
   getDefaultSettings(): Settings {
     return {
       language: APP_LANGUAGES.DE,
@@ -150,7 +153,7 @@ export default class Store {
       }
     }
   }
-  */
+
 
   /**
    * Returns the values as set for EPR SPID OID, MPI ID OID,
@@ -267,17 +270,18 @@ export default class Store {
   /**
    * Gets the currently set language.
    * @returns the set language
+  */
   getLanguage(): APP_LANGUAGES {
     return this.settings.language;
   }
-  */
+
 
   // Removes all data from storage.
   clearAll(): void {
     this.user = undefined;
     this.localPatients = [];
     this.patient = { resourceType: 'Patient' };
-    //this.settings = this.getDefaultSettings();
+    this.settings = this.getDefaultSettings();
     sessionStorage.clear();
     localStorage.clear();
   }

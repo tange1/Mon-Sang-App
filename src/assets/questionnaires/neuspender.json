@@ -2031,17 +2031,20 @@
           "answerOption": [
             {
               "valueCoding": {
-                "display": "Wechsel oder neue Sexualpartnerschaft in den letzten 4 Monaten."
+                "display": "Wechsel oder neue Sexualpartnerschaft in den letzten 4 Monaten.",
+                "code": "A34.1"
               }
             },
             {
               "valueCoding": {
-                "display": "Sexueller Kontakt (geschützt oder nicht geschützt) mit wechselnden Partner/innen (mehr als zwei) in den letzten 4 Monaten"
+                "display": "Sexueller Kontakt (geschützt oder nicht geschützt) mit wechselnden Partner/innen (mehr als zwei) in den letzten 4 Monaten",
+                "code": "A34.2"
               }
             },
             {
               "valueCoding": {
-                "display": "Keine davon"
+                "display": "Keine davon",
+                "code": "A34.3"
               }
             }
           ]

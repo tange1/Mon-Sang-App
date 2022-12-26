@@ -1,63 +1,51 @@
 <template>
 
-  <!--q-header elevated>
-    <q-toolbar>
-      <q-item to="/home" clickable>
-        <q-btn flat dense round icon="arrow_back" aria-label="Menu" />
-      </q-item>
 
-      <q-toolbar-title> Mon Sang App </q-toolbar-title>
 
-      <div class="q-pa-md q-gutter-sm">
-        <q-avatar size="60px">
-        </q-avatar>
+  <q-page padding class="start">
+    <div>
+      <!-- 1. Card: Vorab-Check -->
+      <div class="col-6">
+        <q-card class="link-card" @click="$router.push('/check')">
+          <q-card-section class="card-title">Wo werden meine Daten gespeichert?</q-card-section>
+          <q-card-section>
+            <p>
+              Der Vorab-Check prüft ob Du die wichtigsten Kriterien für die
+              Blutspende erfüllst.
+            </p>
+          </q-card-section>
+        </q-card>
       </div>
-    </q-toolbar>
-  </q-header-->
 
-  <q-page padding>
-    <div class="q-pa-md">
-      <div class="q-gutter-y-md column" style="max-width: 300px">
-        <q-toggle v-model="dense" label="Dense QInput" />
-
-        <h5>Personalien</h5>
-        <q-input v-model="text" label="Nachname" disable :dense="dense">{{ (user.prefix ? user.prefix : '') + ' ' +
-            user.givenName + ' ' +
-            user.familyName
-        }}</q-input>
-        <q-input v-model="text" label="Vorname" :dense="dense"></q-input>
-        <q-input v-model="text" label="Geburtsname" :dense="dense"></q-input>
-        <q-input v-model="text" label="Geburtsdatum" :dense="dense"></q-input>
-        <q-input v-model="text" label="Geschlecht" :dense="dense"></q-input>
-        <q-input v-model="text" label="Beruf" :dense="dense"></q-input>
-
-        <q-input v-model="text" label="Strasse" :dense="dense"></q-input>
-        <q-input v-model="text" label="Nummer" :dense="dense"></q-input>
-        <q-input v-model="text" label="Postleitzahl" :dense="dense"></q-input>
-        <q-input v-model="text" label="Ort" :dense="dense"></q-input>
-        <q-input v-model="text" label="Telefon Privat" :dense="dense"></q-input>
-        <q-input v-model="text" label="Telefon Geschäft" :dense="dense"></q-input>
-        <q-input v-model="text" label="Telefon Mobil" :dense="dense"></q-input>
-        <q-input v-model="text" label="E-Mail" :dense="dense"></q-input>
-        <!--q-input v-model="text" label="Körpergewicht" :dense="dense"></q-input-->
-        <!--q-input v-model="text" label="Grösse" :dense="dense"></q-input-->
-
-        <h5>Blutgruppe</h5>
-        <q-input v-model="text" label="Deine Blutgruppe" disable :dense="dense"></q-input>
+      <!-- 2. Card: Terminvereinbarung -->
+      <div class="col-6">
+        <q-card class="link-card" @click="$router.push('/termin')">
+          <q-card-section class="card-title">Wer hat Zugriff auf meine Daten?</q-card-section>
+          <q-card-section>
+            <p>
+              Nach dem Du den Vorab-Check durchgeführst hast, kannst Du einen
+              Termin in mit einem regionalen Blutspendezentrum vereinbaren.
+            </p>
+          </q-card-section>
+        </q-card>
       </div>
-    </div>
 
-    <div class="q-pa-md">
-      <q-btn class="full-width" color="secondary" align="between" icon-right="arrow_right_alt" label="Personalien"
-        @click="$router.push('/testpage')" />
-      <q-btn class="full-width" color="secondary" align="between" icon-right="arrow_right_alt" label="Blutgruppe"
-        @click="$router.push('/testpage')" />
-      <q-btn class="full-width" color="secondary" align="between" icon-right="arrow_right_alt"
-        label="Blutspenden-Historie" @click="$router.push('/testpage')" />
-      <q-btn class="full-width" color="secondary" align="between" icon-right="arrow_right_alt" label="Einstellungen"
-        @click="$router.push('/testpage')" />
-      <q-btn class="full-width" color="secondary" align="between" icon-right="arrow_right_alt" label="Datenschutz"
-        @click="$router.push('/testpage')" />
+      <!-- 3. Card: Fragebogen -->
+      <div class="col-6">
+        <q-card class="link-card" @click="$router.push('/fragebogen')">
+          <q-card-section class="card-title">3. Fragebogen ausfüllen</q-card-section>
+          <q-card-section>
+            <p>
+              Starte jetzt mit dem Fragebogen. Nach dem Ausfüllen wird ein
+              QR-Code generiert, den Du dann im Blutspendezentrum vorweisen
+              kannst. Bitte denke daran, dass dieser QR-Code nur 48 gültig sein
+              wird.
+            </p>
+          </q-card-section>
+        </q-card>
+      </div>
+
+
     </div>
   </q-page>
 </template>

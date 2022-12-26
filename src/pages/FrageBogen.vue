@@ -46,12 +46,12 @@
 import { defineComponent } from 'vue';
 import QuestionComponent from '../components/Question.vue';
 import NEUSPENDER from '../assets/questionnaires/neuspender.json';
-import { Questionnaire, Bundle, BundleType, Patient, QuestionnaireResponse, ContactPointUse, ContactPointSystem, ContactPoint, HumanName, HumanNameNameUse } from '@i4mi/fhir_r4';
+import { Questionnaire, Bundle, BundleType, Patient, QuestionnaireResponse, ContactPointUse, ContactPointSystem, ContactPoint, HumanName, HumanNameNameUse, code, PatientAdministrativeGender } from '@i4mi/fhir_r4';
 import { IAnswerOption, QuestionnaireData } from '@i4mi/fhir_questionnaire';
 import EpdPlaygroundUtils, { ITI_93_ACTION } from '@i4mi/mhealth-proto-components';
 import { Iti65DocumentBundle, Iti65Metadata, SystemCodeExtension } from '@i4mi/mhealth-proto-components';
-import { response } from 'express';
-import { QPage, QCard, QSeparator, QCardSection, QBtn, QPopupProxy, QBanner, QIcon } from 'quasar';
+//import { response } from 'express';
+//import { QPage, QCard, QSeparator, QCardSection, QBtn, QPopupProxy, QBanner, QIcon, date } from 'quasar';
 
 
 export default defineComponent({
@@ -82,6 +82,18 @@ export default defineComponent({
       this.qData.updateQuestionAnswers(givenNameQuestion, { answer: { de: 'Laura' }, code: 'Laura' } as IAnswerOption);
     }
 
+    // Date of Birth
+    const dateOfBirthQuestion = this.qData.findQuestionById('P4', this.qData.getQuestions());
+    if (dateOfBirthQuestion) {
+      this.qData.updateQuestionAnswers(dateOfBirthQuestion, { answer: { de: '03.01.1927' }, code: '03.01.1927' } as IAnswerOption);
+    }
+
+    // Gender
+    const genderQuestion = this.qData.findQuestionById('P5', this.qData.getQuestions());
+    if (genderQuestion) {
+      this.qData.updateQuestionAnswers(genderQuestion, { answer: { de: 'weiblich' }, code: 'female' } as IAnswerOption);
+    }
+
     // E-Mail
     const emailQuestion = this.qData.findQuestionById('P11', this.qData.getQuestions());
     if (emailQuestion) {
@@ -93,7 +105,6 @@ export default defineComponent({
     if (phonePrivateQuestion) {
       this.qData.updateQuestionAnswers(phonePrivateQuestion, { answer: { de: '076 111 22 33' }, code: '076 111 22 33' } as IAnswerOption);
     }
-
   },
 
   methods: {
@@ -117,30 +128,43 @@ export default defineComponent({
       // Familienname
       if (!patientResource.name) patientResource.name = [];
       const familyName = this.qData.getQuestions().find(question => question.id === 'P1')?.selectedAnswers[0].valueString;
-      const familyNameContactPoint: HumanName = {
+      const familyNameHumanName: HumanName = {
         family: familyName,
         use: HumanNameNameUse.USUAL
       };
       const familyNameIndex = patientResource.name.findIndex(name => name.use === HumanNameNameUse.USUAL);
       if (familyNameIndex === -1) {
-        patientResource.name.push(familyNameContactPoint)
+        patientResource.name.push(familyNameHumanName)
       } else {
-        patientResource.name[familyNameIndex] = familyNameContactPoint
+        patientResource.name[familyNameIndex] = familyNameHumanName
       };
 
       // Vorname
       if (!patientResource.name) patientResource.name = [];
       const givenName = this.qData.getQuestions().find(question => question.id === 'P2')?.selectedAnswers[0].valueString;
-      const givenNameContactPoint: HumanName = {
-        family: familyName,
+      const givenNameHumanName: HumanName = {
+        family: givenName,
         use: HumanNameNameUse.USUAL
       };
       const givenNameIndex = patientResource.name.findIndex(name => name.use === HumanNameNameUse.USUAL);
       if (givenNameIndex === -1) {
-        patientResource.name.push(givenNameContactPoint)
+        patientResource.name.push(givenNameHumanName)
       } else {
-        patientResource.name[givenNameIndex] = givenNameContactPoint
+        patientResource.name[givenNameIndex] = givenNameHumanName
       };
+
+      // Date of Birth
+      const dateOfBirth = this.qData.getQuestions().find(question => question.id === 'P4')?.selectedAnswers[0].valueString;
+      if (dateOfBirth) {
+        const birthDateDate: Date = new Date(dateOfBirth);
+        patientResource.birthDate = birthDateDate.toISOString().substring(0, 10)
+      }
+
+      // Gender
+      const gender = this.qData.getQuestions().find(question => question.id === 'P5')?.selectedAnswers[0].valueString;
+      if (gender) {
+        patientResource.gender = gender as PatientAdministrativeGender
+      }
 
       // E-Mail
       if (!patientResource.telecom) patientResource.telecom = [];
