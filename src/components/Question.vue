@@ -1,15 +1,15 @@
 <template>
   <div v-if="question.isEnabled" :class="
-    'question ' +
-    'question-' +
-    question.type +
-    (question.isInvalid ? ' invalid' : '')
-  ">
+  'question ' +
+  'question-' +
+  question.type +
+  (question.isInvalid ? ' invalid' : '')
+">
     <h2>
       {{
-          (question.prefix ? question.prefix + ': ' : '') +
-          question.label[language]
-      }}
+    (question.prefix ? question.prefix + ': ' : '') +
+    question.label[language]
+}}
     </h2>
     <!-- CHOICE Question -->
     <ul v-if="question.type === 'choice'">
@@ -18,8 +18,8 @@
         <input :type="question.allowsMultipleAnswers ? 'checkbox' : 'radio'" :checked="isSelected(question, answer)"
           :name="question.id" :id="answer.code.toString()" />
         <label for="answer.code.toString()">{{
-            answer.answer[language]
-        }}</label>
+    answer.answer[language]
+}}</label>
       </li>
     </ul>
     <!-- STRING | DECIMAL Question -->
@@ -142,7 +142,7 @@ export default defineComponent({
 
 .question h2 {
   font-size: 1em;
-  line-height: 1.2em;
+  line-height: 1em;
   font-weight: bold;
   margin: 0;
 }

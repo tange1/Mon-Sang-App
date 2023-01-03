@@ -12,7 +12,7 @@
 
 
         <q-avatar rounded>
-          <img src="../assets/logo/logo_3.png">
+          <img src="../assets/logo/logo_4.png">
         </q-avatar>
 
       </q-toolbar>
@@ -28,8 +28,8 @@
         <q-item-label header class="q-mt-xs text-body2 text-weight-bold text-primary text-uppercase">Herzlich Willkommen
           <div backgroundcolor="primary">
             {{ (user.prefix ? user.prefix : '') + ' ' + user.givenName + ' ' +
-                user.familyName
-            }}
+    user.familyName
+}}
           </div>
 
         </q-item-label>
@@ -100,11 +100,13 @@
 import { defineComponent } from 'vue';
 import { LoginType } from 'src/model/interfaces';
 
+/**
 interface MenuEntry {
   to: string;
   translateString: string;
   icon?: string;
 }
+*/
 
 export default defineComponent({
   name: 'MainLayout',

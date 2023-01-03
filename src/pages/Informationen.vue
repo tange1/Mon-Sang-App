@@ -1,7 +1,7 @@
 <template>
   <q-page padding class="start">
     <div id="q-app">
-      <q-card class="my-card">
+      <q-card class="link-card">
         <q-card-section horizontal>
 
           <q-card-section @click="$router.push('/vorblutspende')">
@@ -24,39 +24,85 @@
         </q-card-section>
       </q-card>
 
-      <div class="q-pa-md">
-        <q-carousel arrows animated navigation infinite :autoplay="autoplay" transition-prev="slide-right"
-          transition-next="slide-left" @mouseenter="autoplay = false" @mouseleave="autoplay = true" v-model="slide"
-          v-model:fullscreen="fullscreen" height="250px" bordered class="rounded-borders">
-
-          <!-- 1. Slide -->
-          <q-carousel-slide name="first" img-src="../assets/pictures_blooddonation/Blutspende_4.jpg">
-            <div class="absolute-top custom-caption">
-              <div class="text-h6">Erfahre mehr über die einzelnen Blutgruppen</div>
-              <div class="text-subtitle1">text...</div>
-            </div>
-          </q-carousel-slide>
-
-          <!-- 2. Slide -->
-          <q-carousel-slide name="second" img-src="../assets/pictures_blooddonation/Blutspende_6.jpg">
-            <div class="absolute-top custom-caption">
-              <div class="text-h6">Weshalb ist deine Spende so wichtig?</div>
-              <!--div class="text-subtitle1">Wo kann ich Blut spenden?</div-->
-            </div>
-          </q-carousel-slide>
-
-          <!-- 3. Slide -->
-          <q-carousel-slide name="third" @click="$router.push('/barometer')"
-            img-src="../assets/pictures_blooddonation/Blutgruppenbarometer_2.jpeg">
-            <div class="absolute-top custom-caption">
-              <div class="text-h6">Blutgruppen-Barometer</div>
-              <div class="text-subtitle1">Wie sieht der aktuelle Blutgruppenbestand aus?</div>
-            </div>
-          </q-carousel-slide>
-        </q-carousel>
-      </div>
-
     </div>
+
+
+    <q-card class="link-card">
+      <q-card-section class="card-title">Weshalb ist die Blutspende so wichtig?
+      </q-card-section>
+      <q-separator vertical></q-separator>
+      <q-tabs v-model="tab">
+        <q-tab label="Blutgruppen" name="one" />
+        <q-tab label="Fakten" name="two" />
+        <q-tab label="Sonstiges" name="three" />
+      </q-tabs>
+
+      <q-separator />
+
+      <q-tab-panels v-model="tab" animated>
+
+        <q-tab-panel name="one">
+          <q-video src="https://www.youtube.com/embed/l1IgmkV-ebM" />
+        </q-tab-panel>
+
+        <q-tab-panel name="two">
+
+          <q-item>
+            <q-item-section>
+              <q-item-label>4 von 5 Menschen brauchen mind. einmal im Leben fremdes Blut.</q-item-label>
+            </q-item-section>
+            <q-item-section side>
+              <q-icon name="groups" color="primary" />
+            </q-item-section>
+          </q-item>
+
+          <q-separator spaced inset />
+
+          <q-item>
+            <q-item-section>
+              <q-item-label>Die Schweiz ist täglich auf rund 700 Blutspenden angewiesen.</q-item-label>
+            </q-item-section>
+            <q-item-section side>
+              <q-icon name="production_quantity_limits" color="primary" />
+            </q-item-section>
+          </q-item>
+
+          <q-separator spaced inset />
+
+          <q-item>
+            <q-item-section>
+              <q-item-label>Das Blut kann nicht künstlich hergestellt werden.</q-item-label>
+            </q-item-section>
+            <q-item-section side>
+              <q-icon name="bloodtype" color="primary" />
+            </q-item-section>
+          </q-item>
+
+          <q-separator spaced inset />
+
+          <q-item>
+            <q-item-section>
+              <q-item-label>Mit einer Blutspende können bis zu 3 Leben gerettet werden.</q-item-label>
+            </q-item-section>
+            <q-item-section side>
+              <q-icon name="volunteer_activism" color="primary" />
+            </q-item-section>
+          </q-item>
+
+        </q-tab-panel>
+
+        <q-tab-panel name="three">
+          With so much content to display at once, and often so little screen real-estate,
+          Cards have fast become the design pattern of choice for many companies, including
+          the likes of Google and Insta.
+          <q-separator vertical></q-separator>
+          With so much content to display at once, and often so little screen real-estate,
+          Cards have fast become the design pattern of choice for many companies, including
+          the likes of Google and Twitter.
+        </q-tab-panel>
+      </q-tab-panels>
+    </q-card>
+
 
 
   </q-page>
@@ -73,6 +119,7 @@ export default defineComponent({
       autoplay: true,
       slide: 'first',
       fullscreen: false,
+      tab: 'one',
     }
   }
 });

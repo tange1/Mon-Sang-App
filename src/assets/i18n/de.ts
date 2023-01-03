@@ -174,5 +174,11 @@ export default {
     title: '404',
     text: 'Ooops. Hier gibt es nichts zu sehen.',
     goHome: 'Zurück zum Hauptbildschirm'
+  },
+  blutspendezentren: {
+    aargau_solothurn: {
+      address: 'Hebelstrasse 10, 4031 Basel',
+      telefon: 'Tel. 061 265 20 90'
+    }
   }
 };

@@ -1,7 +1,7 @@
 <template>
   <router-view v-if="isLoggedIn" />
-  <LoginMock v-else :acceptedLogins="logins" :onLogin="login" @message="displayMessage" :processing="processingLogin" />
-  <!--LoginMock v-else :acceptedLogins="logins" :onLogin="login" @message="displayMessage" /-->
+  <!--LoginMock v-else :acceptedLogins="logins" :onLogin="login" @message="displayMessage" :processing="processingLogin" /-->
+  <LoginMock v-else :acceptedLogins="logins" :onLogin="login" @message="displayMessage" />
 </template>
 
 <script lang="ts">
@@ -90,7 +90,7 @@ export default defineComponent({
             Notify.create({
               message: message.title,
               caption: message.text,
-              position: 'top-right',
+              position: 'top',
             })
           );
           break;

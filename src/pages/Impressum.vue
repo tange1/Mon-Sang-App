@@ -1,7 +1,7 @@
 <template>
   <q-page padding class="start">
     <div id="q-app">
-      <q-card class="my-card">
+      <q-card class="link-card">
 
         <q-card-section class="card-title">Informationen zur MonSang App</q-card-section>
 
@@ -19,8 +19,7 @@
         <q-item>
           <q-item-section>
             <q-item-label>Herausgeber</q-item-label>
-            <q-item-label caption lines="3">Nimm besonders nach der Spende
-              reichlich Flüssigkeit zu dir.</q-item-label>
+            <q-item-label caption lines="3">Ein Medizininformatik-Studierender</q-item-label>
           </q-item-section>
         </q-item>
 
@@ -31,7 +30,7 @@
             <q-item-label>Mitarbeit</q-item-label>
             <q-item-label caption lines="7">Diese Arbeit wurde mithilfe des Instituts für Medizininformatik (I4MI)
               entwickelt.
-              Auch das Schweizerische Rote Kreuz (SRK) hat in Forms eines Interviews eine Beitrag geleistet.
+              Auch das Schweizerische Rote Kreuz (SRK) hat in Forms eines Interviews einen Beitrag geleistet.
             </q-item-label>
           </q-item-section>
         </q-item>

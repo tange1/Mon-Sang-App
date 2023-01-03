@@ -7,7 +7,8 @@
           v-model:fullscreen="fullscreen" height="510px" bordered class="rounded-borders">
 
           <!-- 1. Slide -->
-          <q-carousel-slide name="first" img-src="../assets/pictures_blooddonation/Blutspende_1.webp">
+          <q-carousel-slide name="first" @click="$router.push('/events')"
+            img-src="../assets/pictures_blooddonation/Blutspende_1.webp">
             <div class="absolute-top custom-caption">
               <div class="text-h6">Nächster Blutspende-Event</div>
               <div class="text-subtitle1">Wo finden die nächsten Events statt?</div>
@@ -15,7 +16,8 @@
           </q-carousel-slide>
 
           <!-- 2. Slide -->
-          <q-carousel-slide name="second" img-src="../assets/pictures_blooddonation/Blutspende_2.jpg">
+          <q-carousel-slide name="second" @click="$router.push('/spendezentrum')"
+            img-src="../assets/pictures_blooddonation/Blutspende_2.jpg">
             <div class="absolute-top custom-caption">
               <div class="text-h6">Regionale Blutspendezentren</div>
               <div class="text-subtitle1">Wo kann ich Blut spenden?</div>

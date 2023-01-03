@@ -361,7 +361,7 @@
             },
             {
               "linkId": "P7.2",
-              "type": "integer",
+              "type": "string",
               "text": "Strassennummer",
               "required": false
             },
@@ -502,7 +502,7 @@
     {
       "linkId": "Q00",
       "type": "group",
-      "text": "Fragebogen",
+      "text": "Gesundheitsfragebogen",
       "item": [
         {
           "linkId": "Q1",

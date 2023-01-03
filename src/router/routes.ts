@@ -6,6 +6,10 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       {
+        path: '/#',
+        component: () => import('pages/Home.vue'),
+      },
+      {
         path: '/home',
         component: () => import('pages/Home.vue'),
       },
@@ -14,24 +18,12 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/MeinProfil.vue'),
       },
       {
-        path: '/personalien',
-        component: () => import('pages/profil/ProfilPersonalien.vue'),
-      },
-      {
         path: '/blutgruppe',
-        component: () => import('pages/profil/ProfilBlutgruppe.vue'),
-      },
-      {
-        path: '/historie',
-        component: () => import('pages/profil/ProfilHistorie.vue'),
-      },
-      {
-        path: '/einstellungen',
-        component: () => import('pages/profil/ProfilEinstellungen.vue'),
+        component: () => import('src/pages/ProfilBlutgruppe.vue'),
       },
       {
         path: '/datenschutz',
-        component: () => import('pages/profil/ProfilDatenschutz.vue'),
+        component: () => import('src/pages/Datenschutz.vue'),
       },
       {
         path: '/meinprofil_2',
@@ -44,10 +36,6 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/spenden',
         component: () => import('src/pages/Spenden.vue'),
-      },
-      {
-        path: '/home',
-        component: () => import('pages/Home.vue'),
       },
       {
         path: '/fragebogen',
@@ -86,8 +74,20 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/Impressum.vue')
       },
       {
+        path: 'spendezentrum',
+        component: () => import('pages/BlutspendeZentren.vue')
+      },
+      {
+        path: 'events',
+        component: () => import('pages/BlutspendeEvents.vue')
+      },
+      {
         path: '/testpage',
         component: () => import('src/pages/TestPage.vue'),
+      },
+      {
+        path: '/testpage_"',
+        component: () => import('src/pages/TestPage_2.vue'),
       },
     ],
   },

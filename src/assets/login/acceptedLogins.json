@@ -29,8 +29,16 @@
       "postal code": "4001",
       "place": "Basel"
     },
+    "donationNumber": "1234567",
     "bloodGroup": "0+"
 
+  },
+  {
+    "username": "matteo@mail.li",
+    "password": "test",
+    "phone": "076 111 22 33",
+    "givenName": "Donald",
+    "familyName": "Wyss"
   },
   {
     "username": "donald@wyss.ch",

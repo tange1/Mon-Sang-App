@@ -1,4 +1,5 @@
-import { Patient } from '@i4mi/fhir_r4';
+import { Organization, Patient } from '@i4mi/fhir_r4';
+import { FhirUtils } from '@i4mi/mhealth-proto-components';
 import { LoginType, Settings } from 'src/model/interfaces';
 import { APP_LANGUAGES } from 'src/boot/i18n';
 
@@ -262,11 +263,12 @@ export default class Store {
   /**
    * Gets the organization as a useable FHIR resource.
    * @returns A FHIR resource representing the current organization
+    */
 
   getOrganizationResource(): Organization {
     return this.settings.organization;
   }
-  */
+
   /**
    * Gets the currently set language.
    * @returns the set language

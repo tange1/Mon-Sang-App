@@ -35,11 +35,11 @@
 
       <div class="row justify-center">
         <q-btn-toggle glossy v-model="slide" :options="[
-          { label: 1, value: 'style' },
-          { label: 2, value: 'tv' },
-          { label: 3, value: 'layers' },
-          { label: 4, value: 'map' },
-        ]" />
+  { label: 1, value: 'style' },
+  { label: 2, value: 'tv' },
+  { label: 3, value: 'layers' },
+  { label: 4, value: 'map' },
+]" />
       </div>
     </div>
 
@@ -87,7 +87,7 @@
 import { defineComponent } from 'vue';
 import QuestionComponent from '../components/Question.vue';
 import NEUSPENDER_GRUPPIERT from '../assets/questionnaires/neuspender-gruppiert.json';
-import { Questionnaire, QuestionnaireResponse } from '@i4mi/fhir_r4';
+import { Questionnaire } from '@i4mi/fhir_r4';
 import { QuestionnaireData } from '@i4mi/fhir_questionnaire';
 import { ref } from 'vue';
 

@@ -1,5 +1,33 @@
 <template>
   <q-card class="login-card">
+    <img class="horizontal-middle" alt="Mon Sang App logo" src="../assets/logo/logo_4.png" />
+
+    <!-- Login -->
+    <q-card-section class="card-title">Login</q-card-section>
+    <template v-if="code === ''">
+      <q-card-section class="login-text">
+        <p>Willkommen in der Mon Sang App</p>
+        <p>Melde dich mit deiner E-Mailadresse und Passwort an.</p>
+        <!-- E-Mail und Passwort -->
+        <form id="login-form">
+          <!-- E-Mail eingeben -->
+          <q-input v-model="eId" label="Email" type="email" />
+          <!-- Passwort eingeben -->
+          <q-input v-model="password" label="Passwort" type="password" />
+          <q-btn class="bottom-center" id="login-button" @click="login" type="submit" label="Anmelden"
+            :disable="password === '' || eId === ''" />
+        </form>
+
+        <!-- Falls Passwort falsch -->
+        <p v-if="invalidPassword" class="warning">Falsches Passwort</p>
+      </q-card-section>
+    </template>
+  </q-card>
+</template>
+
+
+<!--template>
+  <q-card class="login-card">
     <img class="horizontal-middle" alt="Mon Sang App logo" src="../assets/logo/logo_3.png" />
     <q-card-section class="card-title">Login</q-card-section>
     <template v-if="code === ''">
@@ -18,7 +46,7 @@
     <q-card-section v-else>
       <p>
         {{ $t('login.enter_code1')
-        }}<span class="phonenumber">{{ obscurePhoneNumber(user.phone) }}</span>text
+}}<span class="phonenumber">{{ obscurePhoneNumber(user.phone) }}</span>text
       </p>
       <span @click="generateAndSendCode(user.phone)" href="#" class="resend-link">text</span>
       <form id="code-form">
@@ -26,12 +54,10 @@
         <q-btn id="code-button" @click="checkCode" label="text" type="submit" :loading="processing"
           :disable="processing || codeInput === ''" />
       </form>
-      <p v-if="invalidCode" class="warning">
-        text
-      </p>
+      <p v-if="invalidCode" class="warning">text</p>
     </q-card-section>
   </q-card>
-</template>
+</template-->
 
 <!--template>
   <q-card class="login-card">
@@ -58,8 +84,8 @@
     <q-card-section v-else>
       <p>
         {{ $t('login.enter_code1') }}<span class="phonenumber">{{ obscurePhoneNumber(user.phone) }}</span>{{
-            $t('login.enter_code2')
-        }}
+    $t('login.enter_code2')
+}}
       </p>
       <span @click="generateAndSendCode(user.phone)" href="#" class="resend-link">{{ $t('login.resend') }}</span>
       <form id="code-form">
@@ -74,12 +100,47 @@
   </q-card>
 </template-->
 
+<!--template>
+  <q-card class="login-card">
+    <img class="horizontal-middle" alt="Mon Sang App logo" src="../assets/logo/logo_3.png" />
+
+
+    <q-card-section class="card-title">Login</q-card-section>
+    <template v-if="code === ''">
+      <q-card-section class="login-text">
+        <p>Willkommen in der Mon Sang App</p>
+        <p>Melde dich mit deiner E-Mailadresse und Passwort an.</p>
+
+        <form id="login-form">
+
+          <q-input v-model="eId" label="Email" type="email" />
+
+          <q-input v-model="password" label="Passwort" type="password" />
+          <q-btn class="bottom-center" id="login-button" @click="login" type="submit" label="Anmelden"
+            :disable="password === '' || eId === ''" />
+        </form>
+
+
+        <p v-if="invalidPassword" class="warning">Falsches Passwort</p>
+      </q-card-section>
+    </template>
+  </q-card>
+
+
+    <q-tabs>
+      <q-route-tab to="/home" icon="home" label="" />
+      <q-route-tab to="/spendeblut" icon="gas_meter" label="" />
+      <q-route-tab to="/informationen" icon="info" label="" />
+    </q-tabs>
+  </q-footer>
+</template-->
+
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
 import { LoginType, UIMessage, UIMessageType } from '../model/interfaces';
 //import EpdPlaygroundUtils, { Iti78Params } from '@i4mi/mhealth-proto-components/src/utils/epdPlaygroundUtils';
 
-
+/**
 function generateCode(length: number): string {
   let code = Math.floor(Math.random() * Math.pow(10, length)).toString();
   while (code.length < length) {
@@ -87,7 +148,7 @@ function generateCode(length: number): string {
   }
   return code;
 }
-
+*/
 
 // Mocks the login to the platform with a token displayed in the UI.
 export default defineComponent({
@@ -103,10 +164,10 @@ export default defineComponent({
         phone: '',
         password: '',
         familyName: '',
-        givenName: ''
+        givenName: '',
       } as LoginType,
       invalidPassword: false,
-      invalidCode: false
+      invalidCode: false,
     };
   },
 
@@ -115,10 +176,12 @@ export default defineComponent({
      * Notify parent component about token message to display.
      * Emitted when mocked message for 2FA is "sent".
      */
+    /*
     message: (payload: UIMessage) => {
-      return payload.type === 'sms' && payload.title && payload.text
-    },
+      return payload.type === 'sms' && payload.title && payload.text;
+    },*/
   },
+
 
   props: {
     // Accepted username, password combinations for login.
@@ -136,12 +199,12 @@ export default defineComponent({
     //Displays a processing spinner in the buttons
     processing: {
       type: Boolean,
-      required: false
-    }
+      required: false,
+    },
   },
 
   created() {
-    console.log(this.$t)
+    console.log(this.$t);
   },
 
   methods: {
@@ -156,7 +219,7 @@ export default defineComponent({
         if (this.$props.onLogin) {
           this.$props.onLogin(this.user);
         }
-        this.generateAndSendCode(login.phone);
+        //this.generateAndSendCode(login.phone);
       } else {
         this.invalidPassword = true;
       }
@@ -173,7 +236,7 @@ export default defineComponent({
       }
     },
 
-
+    /**
     generateAndSendCode(phoneNumber: string) {
       this.code = generateCode(4);
       this.$emit('message', {
@@ -189,7 +252,7 @@ export default defineComponent({
         number.substring(number.length - 5, number.length)
       );
     },
-
+    */
   },
   watch: {
     eID(n: string, o: string): void {
@@ -249,7 +312,6 @@ export default defineComponent({
   cursor: pointer;
   color: $secondary;
 }
-
 
 .resend-link:hover {
   text-decoration: none;

@@ -11,6 +11,7 @@ export interface LoginType {
   maidenName: string;
   birthdate: date;
   gender: string;
+  donationNumber: string;
   bloodGroup: string;
 }
 
