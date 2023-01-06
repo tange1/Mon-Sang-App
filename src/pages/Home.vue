@@ -6,7 +6,6 @@
           transition-next="slide-left" @mouseenter="autoplay = false" @mouseleave="autoplay = true" v-model="slide"
           v-model:fullscreen="fullscreen" height="510px" bordered class="rounded-borders">
 
-          <!-- 1. Slide -->
           <q-carousel-slide name="first" @click="$router.push('/events')"
             img-src="../assets/pictures_blooddonation/Blutspende_1.webp">
             <div class="absolute-top custom-caption">
@@ -15,16 +14,14 @@
             </div>
           </q-carousel-slide>
 
-          <!-- 2. Slide -->
           <q-carousel-slide name="second" @click="$router.push('/spendezentrum')"
             img-src="../assets/pictures_blooddonation/Blutspende_2.jpg">
             <div class="absolute-top custom-caption">
               <div class="text-h6">Regionale Blutspendezentren</div>
-              <div class="text-subtitle1">Wo kann ich Blut spenden?</div>
+              <div class="text-subtitle1">Wo kann Blut gespendet werden?</div>
             </div>
           </q-carousel-slide>
 
-          <!-- 3. Slide -->
           <q-carousel-slide name="third" @click="$router.push('/barometer')"
             img-src="../assets/pictures_blooddonation/Blutgruppenbarometer_2.jpeg">
             <div class="absolute-top custom-caption">
@@ -35,12 +32,12 @@
         </q-carousel>
       </div>
     </div>
-
   </q-page>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 
 export default defineComponent({
   name: 'PageIndex',
@@ -51,6 +48,7 @@ export default defineComponent({
       autoplay: true,
       slide: 'first',
       fullscreen: false,
+      qrLink: '',
     };
   },
 });

@@ -1,4 +1,4 @@
-# MonSang App (mon-sang-app-5)
+# MonSang App (mon-sang-app)
 
 A Blood Donation App
 

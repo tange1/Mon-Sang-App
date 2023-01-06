@@ -20,8 +20,8 @@
         <q-item>
           <q-item-section>
             <q-item-label>Trinken</q-item-label>
-            <q-item-label caption lines="3">Nimm besonders nach der Spende
-              reichlich Flüssigkeit zu dir.</q-item-label>
+            <q-item-label caption lines="3">Nehmen Sie besonders nach der Spende
+              reichlich Flüssigkeit zu sich.</q-item-label>
           </q-item-section>
           <q-item-section side>
             <q-icon name="local_drink" color="primary" />
@@ -33,9 +33,9 @@
         <q-item>
           <q-item-section>
             <q-item-label>Genügend Zeit</q-item-label>
-            <q-item-label caption lines="7">Warte mindestens 30 Minuten, bevor du den
-              Blutspendedienst verlassen und 12 Stunden, bevor du eine Tätigkeit ausüben, bei
-              der du durch einen Schwächeanfall dich und andere gefährden könntest (z.B.
+            <q-item-label caption lines="7">Warten Sie mindestens 30 Minuten, bevor Sie den
+              Blutspendedienst verlassen und 12 Stunden, bevor Sie eine Tätigkeit ausüben, bei
+              der Sie durch einen Schwächeanfall sich und andere gefährden könnten (z.B.
               Busfahrer, Kranführer, Dachdecker).</q-item-label>
           </q-item-section>
           <q-item-section side>

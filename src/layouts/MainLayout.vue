@@ -23,17 +23,20 @@
 
       <q-list>
 
-
-
         <q-item-label header class="q-mt-xs text-body2 text-weight-bold text-primary text-uppercase">Herzlich Willkommen
           <div backgroundcolor="primary">
-            {{ (user.prefix ? user.prefix : '') + ' ' + user.givenName + ' ' +
-    user.familyName
-}}
+            {{ (user.prefix ? user.prefix : '') + ' ' + user.givenName + ' ' + user.familyName }}
           </div>
-
         </q-item-label>
-
+        <q-separator spaced inset />
+        <q-item clickable v-ripple to="/notification">
+          <q-item-section avatar>
+            <q-icon name="notifications"><q-badge floating color="red" rounded></q-badge></q-icon>
+          </q-item-section>
+          <q-item-section>
+            Benachrichtigungen
+          </q-item-section>
+        </q-item>
         <q-separator spaced inset />
         <q-item clickable v-ripple to="/datenschutz">
           <q-item-section avatar>
@@ -66,17 +69,6 @@
 
         <q-separator spaced inset />
 
-        <!--q-item v-for="entry in menuEntries" :key="entry.to">
-          <q-icon v-if="entry.icon" :name="'fas fa-' + entry.icon" class="menu-icon" />
-          <router-link :to="entry.to" class="menu-link">{{ $t('layout.menu.' + entry.translateString) }}</router-link>
-          <router-link :to="entry.to" class="menu-link">Link</router-link>
-        </q-item>
-        <q-item>
-          <div v-if="user.givenName" @click="logout">
-            Logout
-            <q-icon name="fas fa-user-md" id="user-icon" />
-          </div>
-        </q-item-->
       </q-list>
     </q-drawer>
 
@@ -88,9 +80,9 @@
     <q-footer>
       <q-tabs class="bg-primary text-white shadow-2">
         <q-route-tab to="/home" icon="home" label="Home" />
-        <q-route-tab to="/spenden" icon="gas_meter" label="Spenden" />
+        <q-route-tab to="/spenden" icon="bloodtype" label="Spenden" />
         <q-route-tab to="/informationen" icon="info" label="Info" />
-        <q-route-tab to="/meinprofil_2" icon="person" label="Profil" />
+        <q-route-tab to="/profil" icon="person" label="Profil" />
       </q-tabs>
     </q-footer>
   </q-layout>

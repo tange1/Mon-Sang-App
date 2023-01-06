@@ -82,7 +82,7 @@ export default defineComponent({
   },
   beforeMount() {
     const question = this.$props.question as IQuestion;
-    if (question.type === QuestionnaireItemType.STRING && question.selectedAnswers.length > 0) {
+    if (question.type === QuestionnaireItemType.STRING || question.type === QuestionnaireItemType.DATE && question.selectedAnswers.length > 0) {
       this.value = question.selectedAnswers[0] as unknown as string;
     }
 

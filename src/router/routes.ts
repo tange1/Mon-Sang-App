@@ -14,10 +14,6 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/Home.vue'),
       },
       {
-        path: '/meinprofil',
-        component: () => import('pages/MeinProfil.vue'),
-      },
-      {
         path: '/blutgruppe',
         component: () => import('src/pages/ProfilBlutgruppe.vue'),
       },
@@ -26,8 +22,8 @@ const routes: RouteRecordRaw[] = [
         component: () => import('src/pages/Datenschutz.vue'),
       },
       {
-        path: '/meinprofil_2',
-        component: () => import('pages/MeinProfil_2.vue'),
+        path: '/profil',
+        component: () => import('src/pages/Profil.vue'),
       },
       {
         path: '/informationen',
@@ -86,8 +82,12 @@ const routes: RouteRecordRaw[] = [
         component: () => import('src/pages/TestPage.vue'),
       },
       {
-        path: '/testpage_"',
+        path: '/testpage_',
         component: () => import('src/pages/TestPage_2.vue'),
+      },
+      {
+        path: '/notification',
+        component: () => import('src/pages/Notification.vue'),
       },
     ],
   },

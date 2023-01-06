@@ -6,7 +6,7 @@
           <q-card class="link-card">
             <q-card-section class="card-title">Vorab-Check:</q-card-section>
             <q-card-section>
-              <p>1. Bist Du mindestens 50 kg schwer?</p>
+              <p>1. Sind Sie mindestens 50 kg schwer?</p>
               <q-btn-toggle type="submit" v-model="question_1" class="my-custom-toggle" no-caps rounded unelevated
                 toggle-color="primary" color="white" text-color="primary" :options="[
   { label: 'Ja', value: 'one' },
@@ -119,7 +119,7 @@
             <q-separator inset></q-separator>
 
             <q-card-section>
-              <q-btn label="Prüfe deine Antworten" class="full-width" color="primary" type="submit"
+              <q-btn label="Prüfen Sie Ihre Antworten" class="full-width" color="primary" type="submit"
                 @click="confirm = true"></q-btn>
             </q-card-section>
             <q-dialog v-model="confirm" persistent>

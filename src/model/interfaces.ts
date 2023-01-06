@@ -11,6 +11,12 @@ export interface LoginType {
   maidenName: string;
   birthdate: date;
   gender: string;
+  /**address: {
+    street: string;
+    streetNumber: string;
+    postalCode: string;
+    place: string;
+  };*/
   donationNumber: string;
   bloodGroup: string;
 }

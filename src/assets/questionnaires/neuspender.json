@@ -60,6 +60,534 @@
           }
         ]
       }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "Q17-Valueset",
+      "url": "http://to.be.defined",
+      "title": "Q17-Valueset",
+      "status": "active",
+      "compose": {
+        "include": [
+          {
+            "system": "http://snomed.info/sct",
+            "concept": [
+              {
+                "code": "A17.1",
+                "display": "Spitalaufenthalt",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Spitalaufenthalt"
+                  }
+                ]
+              },
+              {
+                "code": "A17.2",
+                "display": "Operation",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Operation"
+                  }
+                ]
+              },
+              {
+                "code": "A17.3",
+                "display": "Unfall",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Unfall"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "Q27a-Valueset",
+      "url": "http://to.be.defined",
+      "title": "Q27a-Valueset",
+      "status": "active",
+      "compose": {
+        "include": [
+          {
+            "system": "http://snomed.info/sct",
+            "concept": [
+              {
+                "code": "187192000",
+                "display": "Toxoplasmose",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Toxoplasmose"
+                  }
+                ]
+              },
+              {
+                "code": "271558008",
+                "display": "Pfeiffersches Drüsenfieber",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Pfeiffersches Drüsenfieber"
+                  }
+                ]
+              },
+              {
+                "code": "111910009",
+                "display": "Amöbiasis Schigellose",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Amöbiasis Schigellose"
+                  }
+                ]
+              },
+              {
+                "code": "7125002",
+                "display": "FSME",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "FSME"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "Q27b-Valueset",
+      "url": "http://to.be.defined",
+      "title": "Q27b-Valueset",
+      "status": "active",
+      "compose": {
+        "include": [
+          {
+            "system": "http://snomed.info/sct",
+            "concept": [
+              {
+                "code": "10087007",
+                "display": "Bilharziose",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Bilharziose"
+                  }
+                ]
+              },
+              {
+                "code": "15628003",
+                "display": "Gonorrhö",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Gonorrhö"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "Q27c-Valueset",
+      "url": "http://to.be.defined",
+      "title": "Q27c-Valueset",
+      "status": "active",
+      "compose": {
+        "include": [
+          {
+            "system": "http://snomed.info/sct",
+            "concept": [
+              {
+                "code": "60168000",
+                "display": "Osteomyelitis",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Osteomyelitis"
+                  }
+                ]
+              },
+              {
+                "code": "58718002",
+                "display": "Rheumatisches Fieber",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Rheumatisches Fieber"
+                  }
+                ]
+              },
+              {
+                "code": "56717001",
+                "display": "Tuberkulose",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Tuberkulose"
+                  }
+                ]
+              },
+              {
+                "code": "386661006",
+                "display": "Rückfallfieber",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Rückfallfieber"
+                  }
+                ]
+              },
+              {
+                "code": "40956001",
+                "display": "Guillain-Barré-Syndrom",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Guillain-Barré-Syndrom"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "Q28-Valueset",
+      "url": "http://to.be.defined",
+      "title": "Q28-Valueset",
+      "status": "active",
+      "compose": {
+        "include": [
+          {
+            "system": "http://snomed.info/sct",
+            "concept": [
+              {
+                "code": "61462000",
+                "display": "Malaria",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Malaria"
+                  }
+                ]
+              },
+              {
+                "code": "77506005",
+                "display": "Chagas",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Chagas"
+                  }
+                ]
+              },
+              {
+                "code": "75702008",
+                "display": "Brucellose",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Brucellose"
+                  }
+                ]
+              },
+              {
+                "code": "74942003",
+                "display": "Echinokokkose",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Echinokokkose"
+                  }
+                ]
+              },
+              {
+                "code": "80612004",
+                "display": "Leishmaniose",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Leishmaniose"
+                  }
+                ]
+              },
+              {
+                "code": "186946009",
+                "display": "Lymphogranuloma venereum",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Lymphogranuloma venereum"
+                  }
+                ]
+              },
+              {
+                "code": "105706003",
+                "display": "Filariose",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Filariose"
+                  }
+                ]
+              },
+              {
+                "code": "186788009",
+                "display": "Q-Fieber",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Q-Fieber"
+                  }
+                ]
+              },
+              {
+                "code": "21061004",
+                "display": "Babesiose",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Babesiose"
+                  }
+                ]
+              },
+              {
+                "code": "37109004",
+                "display": "Ebola",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Ebola"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "Q31-Valueset",
+      "url": "http://to.be.defined",
+      "title": "Q31-Valueset",
+      "status": "active",
+      "compose": {
+        "include": [
+          {
+            "system": "http://snomed.info/sct",
+            "concept": [
+              {
+                "code": "A31.1",
+                "display": "eine Magen- / Darmspiegelung",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "eine Magen- / Darmspiegelung"
+                  }
+                ]
+              },
+              {
+                "code": "A31.2",
+                "display": "eine Akupunkturbehandlung",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "eine Akupunkturbehandlung"
+                  }
+                ]
+              },
+              {
+                "code": "A31.3",
+                "display": "eine elektrische Haarentfernung (Nadelepilation)",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "eine elektrische Haarentfernung (Nadelepilation)"
+                  }
+                ]
+              },
+              {
+                "code": "A31.4",
+                "display": "eine Tätowierung",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "eine Tätowierung"
+                  }
+                ]
+              },
+              {
+                "code": "A31.5",
+                "display": "kosmetische Behandlungen wie Permanent-Make-up oder Mikroblading",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "kosmetische Behandlungen wie Permanent-Make-up oder Mikroblading"
+                  }
+                ]
+              },
+              {
+                "code": "A31.6",
+                "display": "ein Piercing",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "ein Piercing"
+                  }
+                ]
+              },
+              {
+                "code": "A31.7",
+                "display": "Kontakt mit Fremdblut (Nadelstichverletzung, Blutspritzer in Augen, Mund oder anderes)",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Kontakt mit Fremdblut (Nadelstichverletzung, Blutspritzer in Augen, Mund oder anderes)"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "Q34-Valueset",
+      "url": "http://to.be.defined",
+      "title": "Q34-Valueset",
+      "status": "active",
+      "compose": {
+        "include": [
+          {
+            "system": "http://snomed.info/sct",
+            "concept": [
+              {
+                "code": "A34.1",
+                "display": "Wechsel oder neue Sexualpartnerschaft in den letzten 4 Monaten",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Wechsel oder neue Sexualpartnerschaft in den letzten 4 Monaten"
+                  }
+                ]
+              },
+              {
+                "code": "A34.2",
+                "display": "Sexueller Kontakt (geschützt oder nicht geschützt) mit wechselnden Partner/innen (mehr als zwei) in den letzten 4 Monaten",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Sexueller Kontakt (geschützt oder nicht geschützt) mit wechselnden Partner/innen (mehr als zwei) in den letzten 4 Monaten"
+                  }
+                ]
+              },
+              {
+                "code": "A34.3",
+                "display": "Sexueller Kontakt unter Einfluss synthetischer Drogen in den letzten 12 Monaten",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Sexueller Kontakt unter Einfluss synthetischer Drogen in den letzten 12 Monaten"
+                  }
+                ]
+              },
+              {
+                "code": "A34.4",
+                "display": "Sexuelle Kontakte unter Annahme von Geld, Drogen oder Medikamenten in den letzten 12 Monaten",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Sexuelle Kontakte unter Annahme von Geld, Drogen oder Medikamenten in den letzten 12 Monaten"
+                  }
+                ]
+              },
+              {
+                "code": "A34.5",
+                "display": "Injektion von Drogen, früher oder gegenwärtig",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Injektion von Drogen, früher oder gegenwärtig"
+                  }
+                ]
+              },
+              {
+                "code": "A34.6",
+                "display": "Positiver Test für HIV (AIDS), Syphilis oder Gelbsucht (Hepatitis B oder C)",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Positiver Test für HIV (AIDS), Syphilis oder Gelbsucht (Hepatitis B oder C)"
+                  }
+                ]
+              },
+              {
+                "code": "A34.7",
+                "display": "Lebens-, Sexual- oder Wohnpartner/in ist in den letzten 6 Monaten an einer Gelbsucht erkrankt",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Lebens-, Sexual- oder Wohnpartner/in ist in den letzten 6 Monaten an einer Gelbsucht erkrankt"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "Countries-Valueset",
+      "url": "http://to.be.defined",
+      "title": "Countries-Valueset",
+      "status": "active",
+      "compose": {
+        "include": [
+          {
+            "system": "http://snomed.info/sct",
+            "concept": [
+              {
+                "code": "CH",
+                "display": "Schweiz",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "Schweiz"
+                  }
+                ]
+              },
+              {
+                "code": "EN",
+                "display": "Englang",
+                "designation": [
+                  {
+                    "language": "de",
+                    "value": "England"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "item": [
@@ -293,30 +821,6 @@
           ]
         },
         {
-          "linkId": "P6",
-          "type": "string",
-          "repeats": false,
-          "required": false,
-          "text": "Beruf",
-          "_text": {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/translation",
-                "extension": [
-                  {
-                    "url": "lang",
-                    "valueCode": "de"
-                  },
-                  {
-                    "url": "content",
-                    "valueString": "Beruf"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
           "linkId": "P7",
           "code": [
             {
@@ -508,8 +1012,8 @@
           "linkId": "Q1",
           "type": "choice",
           "repeats": false,
-          "required": true,
-          "text": "Haben Sie jemals Blut gespendet?",
+          "required": false,
+          "text": "1. Haben Sie jemals Blut gespendet?",
           "_text": {
             "extension": [
               {
@@ -521,7 +1025,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Haben Sie jemals Blut gespendet?"
+                    "valueString": "1. Haben Sie jemals Blut gespendet?"
                   }
                 ]
               }
@@ -534,7 +1038,7 @@
               "type": "date",
               "repeats": false,
               "required": false,
-              "text": "Falls ja, wann letztmals?",
+              "text": "1.1 Falls ja, wann letztmals?",
               "_text": {
                 "extension": [
                   {
@@ -546,7 +1050,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Falls ja, wann letztmals?"
+                        "valueString": "1.1 Falls ja, wann letztmals?"
                       }
                     ]
                   }
@@ -568,7 +1072,7 @@
               "type": "string",
               "repeats": false,
               "required": false,
-              "text": "Wo?",
+              "text": "1.2 Wo?",
               "_text": {
                 "extension": [
                   {
@@ -580,7 +1084,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Wo?"
+                        "valueString": "1.2 Wo?"
                       }
                     ]
                   }
@@ -596,13 +1100,6 @@
                     "code": "373066001"
                   }
                 }
-              ],
-              "item": [
-                {
-                  "type": "display",
-                  "text": "Hier sind weitere Informationen zu dieser Frage.",
-                  "readOnly": true
-                }
               ]
             }
           ]
@@ -611,8 +1108,8 @@
           "linkId": "Q2",
           "type": "choice",
           "repeats": false,
-          "required": true,
-          "text": "Sind Sie mindestens 50 kg schwer?",
+          "required": false,
+          "text": "2. Sind Sie mindestens 50 kg schwer?",
           "_text": {
             "extension": [
               {
@@ -624,7 +1121,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Sind Sie mindestens 50 kg schwer?"
+                    "valueString": "2. Sind Sie mindestens 50 kg schwer?"
                   }
                 ]
               }
@@ -636,8 +1133,8 @@
           "linkId": "Q3",
           "type": "choice",
           "repeats": false,
-          "required": true,
-          "text": "Fühlen Sie sich zurzeit gesund?",
+          "required": false,
+          "text": "3. Fühlen Sie sich zurzeit gesund?",
           "_text": {
             "extension": [
               {
@@ -649,7 +1146,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Fühlen Sie sich zurzeit gesund?"
+                    "valueString": "3. Fühlen Sie sich zurzeit gesund?"
                   }
                 ]
               }
@@ -661,8 +1158,8 @@
           "linkId": "Q4",
           "type": "choice",
           "repeats": false,
-          "required": true,
-          "text": "Hatten Sie in den letzten 7 Tagen eine dentalhygienische oder zahnärztliche Behandlung?",
+          "required": false,
+          "text": "4. Hatten Sie in den letzten 7 Tagen eine dentalhygienische oder zahnärztliche Behandlung?",
           "_text": {
             "extension": [
               {
@@ -674,7 +1171,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Hatten Sie in den letzten 7 Tagen eine dentalhygienische oder zahnärztliche Behandlung?"
+                    "valueString": "4. Hatten Sie in den letzten 7 Tagen eine dentalhygienische oder zahnärztliche Behandlung?"
                   }
                 ]
               }
@@ -687,7 +1184,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Waren Sie in den letzten 4 Wochen in ärztlicher Behandlung oder hatten Sie Fieber über 38°C?",
+          "text": "5. Waren Sie in den letzten 4 Wochen in ärztlicher Behandlung oder hatten Sie Fieber über 38°C?",
           "_text": {
             "extension": [
               {
@@ -699,7 +1196,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Waren Sie in den letzten 4 Wochen in ärztlicher Behandlung oder hatten Sie Fieber über 38°C?"
+                    "valueString": "5. Waren Sie in den letzten 4 Wochen in ärztlicher Behandlung oder hatten Sie Fieber über 38°C?"
                   }
                 ]
               }
@@ -712,7 +1209,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Haben Sie in den letzten 4 Wochen Medikamente – auch rezeptfreie – verwendet (z. B.: Tabletten, Spritzen, Zäpfchen)?",
+          "text": "6. Haben Sie in den letzten 4 Wochen Medikamente – auch rezeptfreie – verwendet (z. B.: Tabletten, Spritzen, Zäpfchen)?",
           "_text": {
             "extension": [
               {
@@ -724,7 +1221,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Haben Sie in den letzten 4 Wochen Medikamente – auch rezeptfreie – verwendet (z. B.: Tabletten, Spritzen, Zäpfchen)?"
+                    "valueString": "6. Haben Sie in den letzten 4 Wochen Medikamente – auch rezeptfreie – verwendet (z. B.: Tabletten, Spritzen, Zäpfchen)?"
                   }
                 ]
               }
@@ -737,7 +1234,7 @@
               "type": "string",
               "repeats": false,
               "required": false,
-              "text": "Welche?",
+              "text": "6.1 Welche?",
               "_text": {
                 "extension": [
                   {
@@ -749,7 +1246,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Welche?"
+                        "valueString": "6.1 Welche?"
                       }
                     ]
                   }
@@ -773,7 +1270,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Haben Sie in den letzten 4 Wochen Medikamente gegen Prostatavergrösserung oder Haarausfall (z. B. Alocapil®, Finacapil®, Propecia® oder Proscar®) oder gegen Akne (z. B. Roaccutan®, Curakne®, Isotretinoin®, Tretinac® oder Toctino®) eingenommen?",
+          "text": "7. Haben Sie in den letzten 4 Wochen Medikamente gegen Prostatavergrösserung oder Haarausfall (z. B. Alocapil®, Finacapil®, Propecia® oder Proscar®) oder gegen Akne (z. B. Roaccutan®, Curakne®, Isotretinoin®, Tretinac® oder Toctino®) eingenommen?",
           "_text": {
             "extension": [
               {
@@ -785,7 +1282,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Haben Sie in den letzten 4 Wochen Medikamente gegen Prostatavergrösserung oder Haarausfall (z. B. Alocapil®, Finacapil®, Propecia® oder Proscar®) oder gegen Akne (z. B. Roaccutan®, Curakne®, Isotretinoin®, Tretinac® oder Toctino®) eingenommen?"
+                    "valueString": "7. Haben Sie in den letzten 4 Wochen Medikamente gegen Prostatavergrösserung oder Haarausfall (z. B. Alocapil®, Finacapil®, Propecia® oder Proscar®) oder gegen Akne (z. B. Roaccutan®, Curakne®, Isotretinoin®, Tretinac® oder Toctino®) eingenommen?"
                   }
                 ]
               }
@@ -798,7 +1295,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Haben Sie in den letzten 4 Monaten Antiretrovirale Therapien/PEP/PrEP (z.B. Truvada®, Isentress®, Prezista/Norvir®) eingenommen?",
+          "text": "8. Haben Sie in den letzten 4 Monaten Antiretrovirale Therapien/PEP/PrEP (z.B. Truvada®, Isentress®, Prezista/Norvir®) eingenommen?",
           "_text": {
             "extension": [
               {
@@ -810,7 +1307,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Haben Sie in den letzten 4 Monaten Antiretrovirale Therapien/PEP/PrEP (z.B. Truvada®, Isentress®, Prezista/Norvir®) eingenommen?"
+                    "valueString": "8. Haben Sie in den letzten 4 Monaten Antiretrovirale Therapien/PEP/PrEP (z.B. Truvada®, Isentress®, Prezista/Norvir®) eingenommen?"
                   }
                 ]
               }
@@ -823,7 +1320,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Haben Sie in den letzten 3 Jahren Neotigason®, Acicutan® (Schuppenflechte) oder Erivedge® (Basalzellkarzinom) eingenommen?",
+          "text": "9. Haben Sie in den letzten 3 Jahren Neotigason®, Acicutan® (Schuppenflechte) oder Erivedge® (Basalzellkarzinom) eingenommen?",
           "_text": {
             "extension": [
               {
@@ -835,7 +1332,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Haben Sie in den letzten 3 Jahren Neotigason®, Acicutan® (Schuppenflechte) oder Erivedge® (Basalzellkarzinom) eingenommen?"
+                    "valueString": "9. Haben Sie in den letzten 3 Jahren Neotigason®, Acicutan® (Schuppenflechte) oder Erivedge® (Basalzellkarzinom) eingenommen?"
                   }
                 ]
               }
@@ -848,7 +1345,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Haben Sie in den letzten 12 Monaten aus Blut hergestellte Medikamente erhalten?",
+          "text": "10. Haben Sie in den letzten 12 Monaten aus Blut hergestellte Medikamente erhalten?",
           "_text": {
             "extension": [
               {
@@ -860,7 +1357,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Haben Sie in den letzten 12 Monaten aus Blut hergestellte Medikamente erhalten?"
+                    "valueString": "10. Haben Sie in den letzten 12 Monaten aus Blut hergestellte Medikamente erhalten?"
                   }
                 ]
               }
@@ -873,7 +1370,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Haben Sie jemals eine Immuntherapie (Zellen oder Serum menschlichen oder tierischen Ursprungs) erhalten?",
+          "text": "11. Haben Sie jemals eine Immuntherapie (Zellen oder Serum menschlichen oder tierischen Ursprungs) erhalten?",
           "_text": {
             "extension": [
               {
@@ -885,7 +1382,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Haben Sie jemals eine Immuntherapie (Zellen oder Serum menschlichen oder tierischen Ursprungs) erhalten?"
+                    "valueString": "11. Haben Sie jemals eine Immuntherapie (Zellen oder Serum menschlichen oder tierischen Ursprungs) erhalten?"
                   }
                 ]
               }
@@ -898,7 +1395,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Wurden Sie in den letzten 12 Monaten gegen Tollwut oder Starrkrampf geimpft?",
+          "text": "12. Wurden Sie in den letzten 12 Monaten gegen Tollwut oder Starrkrampf geimpft?",
           "_text": {
             "extension": [
               {
@@ -910,7 +1407,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Wurden Sie in den letzten 12 Monaten gegen Tollwut oder Starrkrampf geimpft?"
+                    "valueString": "12. Wurden Sie in den letzten 12 Monaten gegen Tollwut oder Starrkrampf geimpft?"
                   }
                 ]
               }
@@ -923,7 +1420,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Haben Sie in den letzten 4 Wochen andere Impfungen erhalten?",
+          "text": "13. Haben Sie in den letzten 4 Wochen andere Impfungen erhalten?",
           "_text": {
             "extension": [
               {
@@ -935,7 +1432,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Haben Sie in den letzten 4 Wochen andere Impfungen erhalten?"
+                    "valueString": "13. Haben Sie in den letzten 4 Wochen andere Impfungen erhalten?"
                   }
                 ]
               }
@@ -948,7 +1445,7 @@
               "type": "string",
               "repeats": false,
               "required": false,
-              "text": "Welche?",
+              "text": "13.1 Welche?",
               "_text": {
                 "extension": [
                   {
@@ -960,7 +1457,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Welche?"
+                        "valueString": "13.1 Welche?"
                       }
                     ]
                   }
@@ -982,7 +1479,7 @@
               "type": "date",
               "repeats": false,
               "required": false,
-              "text": "Wann?",
+              "text": "13.2 Wann?",
               "_text": {
                 "extension": [
                   {
@@ -994,7 +1491,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Wann?"
+                        "valueString": "13.2 Wann?"
                       }
                     ]
                   }
@@ -1018,7 +1515,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Haben oder hatten Sie eine der folgenden Krankheiten oder Krankheitszeichen? Herz/Kreislauf- oder Lungenerkrankung (z. B. erhöhter / zu tiefer Blutdruck, Herzinfarkt, Atemnot, Hirnschlag, Streifung, Bewusstlosigkeit)?",
+          "text": "14. Haben oder hatten Sie eine der folgenden Krankheiten oder Krankheitszeichen? Herz/Kreislauf- oder Lungenerkrankung (z. B. erhöhter / zu tiefer Blutdruck, Herzinfarkt, Atemnot, Hirnschlag, Streifung, Bewusstlosigkeit)?",
           "_text": {
             "extension": [
               {
@@ -1030,7 +1527,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Haben oder hatten Sie eine der folgenden Krankheiten oder Krankheitszeichen? Herz/Kreislauf- oder Lungenerkrankung (z. B. erhöhter / zu tiefer Blutdruck, Herzinfarkt, Atemnot, Hirnschlag, Streifung, Bewusstlosigkeit)?"
+                    "valueString": "14. Haben oder hatten Sie eine der folgenden Krankheiten oder Krankheitszeichen? Herz/Kreislauf- oder Lungenerkrankung (z. B. erhöhter / zu tiefer Blutdruck, Herzinfarkt, Atemnot, Hirnschlag, Streifung, Bewusstlosigkeit)?"
                   }
                 ]
               }
@@ -1043,7 +1540,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Haut (z. B. Verletzung, Ausschlag, Ekzem, Fieberblase) oder Allergie (z. B. Heuschnupfen, Asthma, Medikamente)?",
+          "text": "15. Haut (z. B. Verletzung, Ausschlag, Ekzem, Fieberblase) oder Allergie (z. B. Heuschnupfen, Asthma, Medikamente)?",
           "_text": {
             "extension": [
               {
@@ -1055,7 +1552,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Haut (z. B. Verletzung, Ausschlag, Ekzem, Fieberblase) oder Allergie (z. B. Heuschnupfen, Asthma, Medikamente)?"
+                    "valueString": "15. Haut (z. B. Verletzung, Ausschlag, Ekzem, Fieberblase) oder Allergie (z. B. Heuschnupfen, Asthma, Medikamente)?"
                   }
                 ]
               }
@@ -1068,7 +1565,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Andere Krankheiten (z. B. Zucker, Blut, Thrombose oder Blutungsneigung, Gefässe, Nieren, Nerven, Epilepsie, Krebs, Osteoporose), Suchtkrankheit (Alkohol, Drogen oder Medikamente)?",
+          "text": "16. Andere Krankheiten (z. B. Zucker, Blut, Thrombose oder Blutungsneigung, Gefässe, Nieren, Nerven, Epilepsie, Krebs, Osteoporose), Suchtkrankheit (Alkohol, Drogen oder Medikamente)?",
           "_text": {
             "extension": [
               {
@@ -1080,7 +1577,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Andere Krankheiten (z. B. Zucker, Blut, Thrombose oder Blutungsneigung, Gefässe, Nieren, Nerven, Epilepsie, Krebs, Osteoporose), Suchtkrankheit (Alkohol, Drogen oder Medikamente)?"
+                    "valueString": "16. Andere Krankheiten (z. B. Zucker, Blut, Thrombose oder Blutungsneigung, Gefässe, Nieren, Nerven, Epilepsie, Krebs, Osteoporose), Suchtkrankheit (Alkohol, Drogen oder Medikamente)?"
                   }
                 ]
               }
@@ -1091,9 +1588,9 @@
         {
           "linkId": "Q17",
           "type": "choice",
-          "repeats": false,
+          "repeats": true,
           "required": false,
-          "text": "Hatten Sie in den letzten 3 Jahren oder seit Ihrer letzten Blutspende eine(n) Spitalaufenthalt Operation oder Unfall?",
+          "text": "17. Hatten Sie in den letzten 3 Jahren oder seit Ihrer letzten Blutspende eine(n):",
           "_text": {
             "extension": [
               {
@@ -1105,20 +1602,20 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Hatten Sie in den letzten 3 Jahren oder seit Ihrer letzten Blutspende eine(n) Spitalaufenthalt Operation oder Unfall?"
+                    "valueString": "17. Hatten Sie in den letzten 3 Jahren oder seit Ihrer letzten Blutspende eine(n):"
                   }
                 ]
               }
             ]
           },
-          "answerValueSet": "#YES-NO-Valueset"
+          "answerValueSet": "#Q17-Valueset"
         },
         {
           "linkId": "Q18",
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Wurde Ihnen jemals menschliches oder tierisches Gewebe übertragen oder haben Sie eine Organtransplantation erhalten?",
+          "text": "18. Wurde Ihnen jemals menschliches oder tierisches Gewebe übertragen oder haben Sie eine Organtransplantation erhalten?",
           "_text": {
             "extension": [
               {
@@ -1130,7 +1627,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Wurde Ihnen jemals menschliches oder tierisches Gewebe übertragen oder haben Sie eine Organtransplantation erhalten?"
+                    "valueString": "18. Wurde Ihnen jemals menschliches oder tierisches Gewebe übertragen oder haben Sie eine Organtransplantation erhalten?"
                   }
                 ]
               }
@@ -1143,7 +1640,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Wurde bei Ihnen jemals eine Operation am Gehirn oder Rückenmark durchgeführt?",
+          "text": "19. Wurde bei Ihnen jemals eine Operation am Gehirn oder Rückenmark durchgeführt?",
           "_text": {
             "extension": [
               {
@@ -1155,7 +1652,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Wurde bei Ihnen jemals eine Operation am Gehirn oder Rückenmark durchgeführt?"
+                    "valueString": "19. Wurde bei Ihnen jemals eine Operation am Gehirn oder Rückenmark durchgeführt?"
                   }
                 ]
               }
@@ -1168,7 +1665,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Haben Sie vor 01.01.1986 Wachstumshormone erhalten?",
+          "text": "20. Haben Sie vor 01.01.1986 Wachstumshormone erhalten?",
           "_text": {
             "extension": [
               {
@@ -1180,7 +1677,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Haben Sie vor 01.01.1986 Wachstumshormone erhalten?"
+                    "valueString": "20. Haben Sie vor 01.01.1986 Wachstumshormone erhalten?"
                   }
                 ]
               }
@@ -1193,7 +1690,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Ist bei Ihnen oder bei einem Ihrer Blutsverwandten die Creutzfeldt-Jakob-Erkrankung nachgewiesen worden oder besteht ein Verdacht darauf?",
+          "text": "21. Ist bei Ihnen oder bei einem Ihrer Blutsverwandten die Creutzfeldt-Jakob-Erkrankung nachgewiesen worden oder besteht ein Verdacht darauf?",
           "_text": {
             "extension": [
               {
@@ -1205,7 +1702,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Ist bei Ihnen oder bei einem Ihrer Blutsverwandten die Creutzfeldt-Jakob-Erkrankung nachgewiesen worden oder besteht ein Verdacht darauf?"
+                    "valueString": "21. Ist bei Ihnen oder bei einem Ihrer Blutsverwandten die Creutzfeldt-Jakob-Erkrankung nachgewiesen worden oder besteht ein Verdacht darauf?"
                   }
                 ]
               }
@@ -1218,7 +1715,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Waren Sie zwischen dem 01.01.1980 und dem 31.12.1996 für insgesamt 6 Monate oder länger im Vereinigten Königreich (UK) (England, Wales, Schottland, Nordirland, Isle of Man, Kanalinseln, Gibraltar und Falklandinseln)?",
+          "text": "22. Waren Sie zwischen dem 01.01.1980 und dem 31.12.1996 für insgesamt 6 Monate oder länger im Vereinigten Königreich (UK) (England, Wales, Schottland, Nordirland, Isle of Man, Kanalinseln, Gibraltar und Falklandinseln)?",
           "_text": {
             "extension": [
               {
@@ -1230,7 +1727,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Waren Sie zwischen dem 1. 1. 1980 und dem 31. 12. 1996 für insgesamt 6 Monate oder länger im Vereinigten Königreich (UK) (England, Wales, Schottland, Nordirland, Isle of Man, Kanalinseln, Gibraltar und Falklandinseln)?"
+                    "valueString": "22. Waren Sie zwischen dem 1. 1. 1980 und dem 31. 12. 1996 für insgesamt 6 Monate oder länger im Vereinigten Königreich (UK) (England, Wales, Schottland, Nordirland, Isle of Man, Kanalinseln, Gibraltar und Falklandinseln)?"
                   }
                 ]
               }
@@ -1243,7 +1740,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Haben Sie seit dem 01.01.1980 eine Bluttransfusion erhalten?",
+          "text": "23. Haben Sie seit dem 01.01.1980 eine Bluttransfusion erhalten?",
           "_text": {
             "extension": [
               {
@@ -1255,7 +1752,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Haben Sie seit dem 01.01.1980 eine Bluttransfusion erhalten?"
+                    "valueString": "23. Haben Sie seit dem 01.01.1980 eine Bluttransfusion erhalten?"
                   }
                 ]
               }
@@ -1268,7 +1765,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Waren Sie in den letzten 12 Monaten ausserhalb der Schweiz?",
+          "text": "24. Waren Sie in den letzten 12 Monaten ausserhalb der Schweiz?",
           "_text": {
             "extension": [
               {
@@ -1280,7 +1777,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Waren Sie in den letzten 12 Monaten ausserhalb der Schweiz?"
+                    "valueString": "24. Waren Sie in den letzten 12 Monaten ausserhalb der Schweiz?"
                   }
                 ]
               }
@@ -1293,7 +1790,7 @@
               "type": "string",
               "repeats": false,
               "required": false,
-              "text": "Falls ja, wo?",
+              "text": "24.1 Falls ja, wo?",
               "_text": {
                 "extension": [
                   {
@@ -1305,7 +1802,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Falls ja, wo?"
+                        "valueString": "24.1 Falls ja, wo?"
                       }
                     ]
                   }
@@ -1327,7 +1824,7 @@
               "type": "string",
               "repeats": false,
               "required": false,
-              "text": "Wie lange?",
+              "text": "24.2 Wie lange?",
               "_text": {
                 "extension": [
                   {
@@ -1339,7 +1836,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Wie lange?"
+                        "valueString": "24.2 Wie lange?"
                       }
                     ]
                   }
@@ -1361,7 +1858,7 @@
               "type": "date",
               "repeats": false,
               "required": false,
-              "text": "Seit wann sind Sie zurück?",
+              "text": "24.3 Seit wann sind Sie zurück?",
               "_text": {
                 "extension": [
                   {
@@ -1373,7 +1870,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Seit wann sind Sie zurück?"
+                        "valueString": "24.3 Seit wann sind Sie zurück?"
                       }
                     ]
                   }
@@ -1395,7 +1892,7 @@
               "type": "choice",
               "repeats": false,
               "required": false,
-              "text": "Hatten Sie dort seit Ihrer Rückkehr Krankheitszeichen (z.B. Fieber)?",
+              "text": "24.4 Hatten Sie dort seit Ihrer Rückkehr Krankheitszeichen (z.B. Fieber)?",
               "_text": {
                 "extension": [
                   {
@@ -1407,7 +1904,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Hatten Sie dort seit Ihrer Rückkehr Krankheitszeichen (z.B. Fieber)?"
+                        "valueString": "24.4 Hatten Sie dort seit Ihrer Rückkehr Krankheitszeichen (z.B. Fieber)?"
                       }
                     ]
                   }
@@ -1430,7 +1927,7 @@
               "type": "choice",
               "repeats": false,
               "required": false,
-              "text": "Wenn ja, hatten Sie dort medizinische oder paramedizinische Eingriffe?",
+              "text": "24.5 Wenn ja, hatten Sie dort medizinische oder paramedizinische Eingriffe?",
               "_text": {
                 "extension": [
                   {
@@ -1442,7 +1939,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Wenn ja, hatten Sie dort medizinische oder paramedizinische Eingriffe?"
+                        "valueString": "24.5 Wenn ja, hatten Sie dort medizinische oder paramedizinische Eingriffe?"
                       }
                     ]
                   }
@@ -1467,7 +1964,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Sind Sie ausserhalb der Schweiz geboren, aufgewachsen oder haben Sie dort mehr als 6 Monate gelebt?",
+          "text": "25. Sind Sie ausserhalb der Schweiz geboren, aufgewachsen oder haben Sie dort mehr als 6 Monate gelebt?",
           "_text": {
             "extension": [
               {
@@ -1479,7 +1976,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Sind Sie ausserhalb der Schweiz geboren, aufgewachsen oder haben Sie dort mehr als 6 Monate gelebt?"
+                    "valueString": "25. Sind Sie ausserhalb der Schweiz geboren, aufgewachsen oder haben Sie dort mehr als 6 Monate gelebt?"
                   }
                 ]
               }
@@ -1492,7 +1989,7 @@
               "type": "string",
               "repeats": false,
               "required": false,
-              "text": "Wenn ja, in welchem Land?",
+              "text": "25.1 Wenn ja, in welchem Land?",
               "_text": {
                 "extension": [
                   {
@@ -1504,7 +2001,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Wenn ja, in welchem Land?"
+                        "valueString": "25.1 Wenn ja, in welchem Land?"
                       }
                     ]
                   }
@@ -1526,7 +2023,7 @@
               "type": "date",
               "repeats": false,
               "required": false,
-              "text": "Seit wann leben Sie in der Schweiz?",
+              "text": "25.2 Seit wann leben Sie in der Schweiz?",
               "_text": {
                 "extension": [
                   {
@@ -1538,7 +2035,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Seit wann leben Sie in der Schweiz?"
+                        "valueString": "25.2 Seit wann leben Sie in der Schweiz?"
                       }
                     ]
                   }
@@ -1562,7 +2059,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Ist Ihre Mutter ausserhalb Europas geboren, aufgewachsen oder hat dort mehr als 6 Monate gelebt?",
+          "text": "26. Ist Ihre Mutter ausserhalb Europas geboren, aufgewachsen oder hat dort mehr als 6 Monate gelebt?",
           "_text": {
             "extension": [
               {
@@ -1574,7 +2071,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Ist Ihre Mutter ausserhalb Europas geboren, aufgewachsen oder hat dort mehr als 6 Monate gelebt?"
+                    "valueString": "26. Ist Ihre Mutter ausserhalb Europas geboren, aufgewachsen oder hat dort mehr als 6 Monate gelebt?"
                   }
                 ]
               }
@@ -1587,7 +2084,7 @@
               "type": "string",
               "repeats": false,
               "required": false,
-              "text": "Wenn ja, in welchem Land?",
+              "text": "26.1 Wenn ja, in welchem Land?",
               "_text": {
                 "extension": [
                   {
@@ -1599,7 +2096,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Wenn ja, in welchem Land?"
+                        "valueString": "26.1 Wenn ja, in welchem Land?"
                       }
                     ]
                   }
@@ -1619,11 +2116,11 @@
           ]
         },
         {
-          "linkId": "Q27",
+          "linkId": "Q27a",
           "type": "choice",
-          "repeats": false,
+          "repeats": true,
           "required": false,
-          "text": "Erkrankten Sie in den letzten 6 Monaten an: Toxoplasmose Pfeiffer’schem Drüsenfieber Amöbiasis Schigellose FSME 12 Monaten an: Bilharziose Gonorrhö 2 Jahren an: Osteomyelitis Rheumatischem Fieber Tuberkulose Rückfallfieber Guillain-Barré-Syndrom",
+          "text": "27a. Erkrankten Sie in den letzten 6 Monaten an:",
           "_text": {
             "extension": [
               {
@@ -1635,20 +2132,70 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Erkrankten Sie in den letzten 6 Monaten an: Toxoplasmose Pfeiffer’schem Drüsenfieber Amöbiasis Schigellose FSME 12 Monaten an: Bilharziose Gonorrhö 2 Jahren an: Osteomyelitis Rheumatischem Fieber Tuberkulose Rückfallfieber Guillain-Barré-Syndrom"
+                    "valueString": "27a.Erkrankten Sie in den letzten 6 Monaten an:"
                   }
                 ]
               }
             ]
           },
-          "answerValueSet": "#YES-NO-Valueset"
+          "answerValueSet": "#Q27a-Valueset"
+        },
+        {
+          "linkId": "Q27b",
+          "type": "choice",
+          "repeats": true,
+          "required": false,
+          "text": "27b. Erkrankten Sie in den letzten 12 Monaten an:",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "de"
+                  },
+                  {
+                    "url": "content",
+                    "valueString": "27b. Erkrankten Sie in den letzten 12 Monaten an:"
+                  }
+                ]
+              }
+            ]
+          },
+          "answerValueSet": "#Q27b-Valueset"
+        },
+        {
+          "linkId": "Q27c",
+          "type": "choice",
+          "repeats": true,
+          "required": false,
+          "text": "27c. Erkrankten Sie in den letzten 2 Jahren an:",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "de"
+                  },
+                  {
+                    "url": "content",
+                    "valueString": "27c. Erkrankten Sie in den letzten 2 Jahren an:"
+                  }
+                ]
+              }
+            ]
+          },
+          "answerValueSet": "#Q27c-Valueset"
         },
         {
           "linkId": "Q28",
           "type": "choice",
-          "repeats": false,
+          "repeats": true,
           "required": false,
-          "text": "Erkrankten Sie jemals an: Malaria Chagas Brucellose Echinokokkose Leishmaniose Lymphogranuloma venereum Filariose Q-Fieber Babesiose Ebola?",
+          "text": "28. Erkrankten Sie jemals an:",
           "_text": {
             "extension": [
               {
@@ -1660,20 +2207,20 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Erkrankten Sie jemals an: Malaria Chagas Brucellose Echinokokkose Leishmaniose Lymphogranuloma venereum Filariose Q-Fieber Babesiose Ebola?"
+                    "valueString": "28. Erkrankten Sie jemals an:"
                   }
                 ]
               }
             ]
           },
-          "answerValueSet": "#YES-NO-Valueset",
+          "answerValueSet": "#Q28-Valueset",
           "item": [
             {
               "linkId": "Q28.1",
               "type": "date",
               "repeats": false,
               "required": false,
-              "text": "Wenn ja, wann?",
+              "text": "28.1 Wenn ja, wann?",
               "_text": {
                 "extension": [
                   {
@@ -1685,7 +2232,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Wenn ja, wann?"
+                        "valueString": "28.1 Wenn ja, wann?"
                       }
                     ]
                   }
@@ -1695,10 +2242,17 @@
                 {
                   "question": "Q28",
                   "operator": "=",
-                  "answerCoding": {
-                    "system": "http://snomed.info/sct",
-                    "code": "373066001"
-                  }
+                  "answerCoding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "61462000"
+                    },
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "77506005"
+                    }
+
+                  ]
                 }
               ]
             }
@@ -1709,7 +2263,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Hatten Sie jemals eine andere schwere Infektionskrankheit?",
+          "text": "29. Hatten Sie jemals eine andere schwere Infektionskrankheit?",
           "_text": {
             "extension": [
               {
@@ -1721,7 +2275,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Hatten Sie jemals eine andere schwere Infektionskrankheit?"
+                    "valueString": "29. Hatten Sie jemals eine andere schwere Infektionskrankheit?"
                   }
                 ]
               }
@@ -1734,7 +2288,7 @@
               "type": "string",
               "repeats": false,
               "required": false,
-              "text": "Wenn ja: Welche?",
+              "text": "29.1 Wenn ja: Welche?",
               "_text": {
                 "extension": [
                   {
@@ -1746,7 +2300,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Wenn ja: Welche?"
+                        "valueString": "29.1 Wenn ja: Welche?"
                       }
                     ]
                   }
@@ -1768,7 +2322,7 @@
               "type": "date",
               "repeats": false,
               "required": false,
-              "text": "Wann?",
+              "text": "29.2 Wann?",
               "_text": {
                 "extension": [
                   {
@@ -1780,7 +2334,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Wann?"
+                        "valueString": "29.2 Wann?"
                       }
                     ]
                   }
@@ -1804,7 +2358,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Hatten Sie in den letzten 4 Wochen einen Zeckenstich oder Kontakt mit Infektionskrankheiten?",
+          "text": "30. Hatten Sie in den letzten 4 Wochen einen Zeckenstich oder Kontakt mit Infektionskrankheiten?",
           "_text": {
             "extension": [
               {
@@ -1816,7 +2370,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Hatten Sie in den letzten 4 Wochen einen Zeckenstich oder Kontakt mit Infektionskrankheiten?"
+                    "valueString": "30. Hatten Sie in den letzten 4 Wochen einen Zeckenstich oder Kontakt mit Infektionskrankheiten?"
                   }
                 ]
               }
@@ -1863,9 +2417,9 @@
         {
           "linkId": "Q31",
           "type": "choice",
-          "repeats": false,
+          "repeats": true,
           "required": false,
-          "text": "Hatten Sie in den letzten 4 Monaten: eine Magen-/Darmspiegelung eine Akupunkturbehandlung eine elektrische Haarentfernung (Nadelepilation) eine Tätowierung kosmetische Behandlungen wie Permanent-Make-up oder Mikroblading ein Piercing Kontakt mit Fremdblut (Nadelstichverletzung, Blutspritzer in Augen, Mund oder anderes)?",
+          "text": "31. Hatten Sie in den letzten 4 Monaten:",
           "_text": {
             "extension": [
               {
@@ -1877,20 +2431,20 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Hatten Sie in den letzten 4 Monaten: eine Magen-/Darmspiegelung eine Akupunkturbehandlung eine elektrische Haarentfernung (Nadelepilation) eine Tätowierung kosmetische Behandlungen wie Permanent-Make-up oder Mikroblading ein Piercing Kontakt mit Fremdblut (Nadelstichverletzung, Blutspritzer in Augen, Mund oder anderes)?"
+                    "valueString": "31. Hatten Sie in den letzten 4 Monaten:"
                   }
                 ]
               }
             ]
           },
-          "answerValueSet": "#YES-NO-Valueset",
+          "answerValueSet": "#Q31-Valueset",
           "item": [
             {
               "linkId": "Q31.1",
               "type": "date",
               "repeats": false,
               "required": false,
-              "text": "Wenn ja: Wann?",
+              "text": "31.1 Wenn ja: Wann?",
               "_text": {
                 "extension": [
                   {
@@ -1902,7 +2456,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Wenn ja: Wann?"
+                        "valueString": "31.1 Wenn ja: Wann?"
                       }
                     ]
                   }
@@ -1914,17 +2468,66 @@
                   "operator": "=",
                   "answerCoding": {
                     "system": "http://snomed.info/sct",
-                    "code": "373066001"
+                    "code": "A31.1"
+                  }
+                },
+                {
+                  "question": "Q31",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "A31.2"
+                  }
+                },
+                {
+                  "question": "Q31",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "A31.3"
+                  }
+                },
+                {
+                  "question": "Q31",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "A31.4"
+                  }
+                },
+                {
+                  "question": "Q31",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "A31.5"
+                  }
+                },
+                {
+                  "question": "Q31",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "A31.6"
+                  }
+                },
+                {
+                  "question": "Q31",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "A31.7"
                   }
                 }
-              ]
+              ],
+              "enableBehavior": "any"
             },
             {
               "linkId": "Q31.2",
               "type": "string",
               "repeats": false,
               "required": false,
-              "text": "Wo?",
+              "text": "31.2 Wo?",
               "_text": {
                 "extension": [
                   {
@@ -1936,7 +2539,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Wo?"
+                        "valueString": "31.2 Wo?"
                       }
                     ]
                   }
@@ -1948,10 +2551,59 @@
                   "operator": "=",
                   "answerCoding": {
                     "system": "http://snomed.info/sct",
-                    "code": "373066001"
+                    "code": "A31.1"
+                  }
+                },
+                {
+                  "question": "Q31",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "A31.2"
+                  }
+                },
+                {
+                  "question": "Q31",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "A31.3"
+                  }
+                },
+                {
+                  "question": "Q31",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "A31.4"
+                  }
+                },
+                {
+                  "question": "Q31",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "A31.5"
+                  }
+                },
+                {
+                  "question": "Q31",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "A31.6"
+                  }
+                },
+                {
+                  "question": "Q31",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "A31.7"
                   }
                 }
-              ]
+              ],
+              "enableBehavior": "any"
             }
           ]
         },
@@ -1960,7 +2612,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Haben Sie jemals eine Gelbsucht (Hepatitis) durchgemacht oder einen positiven Hepatitis-Test gehabt?",
+          "text": "32. Haben Sie jemals eine Gelbsucht (Hepatitis) durchgemacht oder einen positiven Hepatitis-Test gehabt?",
           "_text": {
             "extension": [
               {
@@ -1972,7 +2624,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Haben Sie jemals eine Gelbsucht (Hepatitis) durchgemacht oder einen positiven Hepatitis-Test gehabt?"
+                    "valueString": "32. Haben Sie jemals eine Gelbsucht (Hepatitis) durchgemacht oder einen positiven Hepatitis-Test gehabt?"
                   }
                 ]
               }
@@ -1985,7 +2637,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Ist Ihr/Ihre Sexualpartner/in in den letzten 3 Monaten an Zika erkrankt?",
+          "text": "33. Ist Ihr/Ihre Sexualpartner/in in den letzten 3 Monaten an Zika erkrankt?",
           "_text": {
             "extension": [
               {
@@ -1997,7 +2649,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Ist Ihr/Ihre Sexualpartner/in in den letzten 3 Monaten an Zika erkrankt?"
+                    "valueString": "33. Ist Ihr/Ihre Sexualpartner/in in den letzten 3 Monaten an Zika erkrankt?"
                   }
                 ]
               }
@@ -2008,9 +2660,9 @@
         {
           "linkId": "Q34",
           "type": "choice",
-          "repeats": false,
+          "repeats": true,
           "required": false,
-          "text": "Treffen eine oder mehrere der folgenden Risikosituationen für Sie zu? Wenn ja, welche?",
+          "text": "34. Treffen eine oder mehrere der folgenden Risikosituationen für Sie zu? Wenn ja, welche?",
           "_text": {
             "extension": [
               {
@@ -2022,39 +2674,20 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Treffen eine oder mehrere der folgenden Risikosituationen für Sie zu? Wenn ja, welche? Wechsel oder neue Sexualpartnerschaft in den letzten 4 Monaten. Sexueller Kontakt (geschützt oder nicht geschützt) mit wechselnden Partner/innen (mehr als zwei) in den letzten 4 Monaten"
+                    "valueString": "34. Treffen eine oder mehrere der folgenden Risikosituationen für Sie zu? Wenn ja, welche?"
                   }
                 ]
               }
             ]
           },
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Wechsel oder neue Sexualpartnerschaft in den letzten 4 Monaten.",
-                "code": "A34.1"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Sexueller Kontakt (geschützt oder nicht geschützt) mit wechselnden Partner/innen (mehr als zwei) in den letzten 4 Monaten",
-                "code": "A34.2"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Keine davon",
-                "code": "A34.3"
-              }
-            }
-          ]
+          "answerValueSet": "#Q34-Valueset"
         },
         {
           "linkId": "Q35",
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Sexueller Kontakt unter Einfluss synthetischer Drogen in den letzten 12 Monaten sexuelle Kontakte unter Annahme von Geld, Drogen oder Medikamenten in den letzten 12 Monaten Injektion von Drogen, früher oder gegenwärtig Positiver Test für HIV (AIDS), Syphilis oder Gelbsucht (Hepatitis B oder C) Lebens-, Sexual- oder Wohnpartner/in ist in den letzten 6 Monaten an einer Gelbsucht erkrankt.",
+          "text": "35. Haben Sie in den letzten 12 Monaten sexuelle Kontakte mit Partner/innen gehabt, die sich einer Risikosituation wie in der vorherigen Frage ausgesetzt haben?",
           "_text": {
             "extension": [
               {
@@ -2066,7 +2699,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Sexueller Kontakt unter Einfluss synthetischer Drogen in den letzten 12 Monaten sexuelle Kontakte unter Annahme von Geld, Drogen oder Medikamenten in den letzten 12 Monaten Injektion von Drogen, früher oder gegenwärtig Positiver Test für HIV (AIDS), Syphilis oder Gelbsucht (Hepatitis B oder C) Lebens-, Sexual- oder Wohnpartner/in ist in den letzten 6 Monaten an einer Gelbsucht erkrankt."
+                    "valueString": "35. Haben Sie in den letzten 12 Monaten sexuelle Kontakte mit Partner/innen gehabt, die sich einer Risikosituation wie in der vorherigen Frage ausgesetzt haben?"
                   }
                 ]
               }
@@ -2079,7 +2712,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Haben Sie in den letzten 4 Monaten sexuellen Kontakt mit Partner/innen gehabt, die sich in HIV-HCV-HBV-Risikoländern für mehr als 6 Monate aufgehalten haben oder dort Bluttransfusionen erhalten haben?",
+          "text": "36. Haben Sie in den letzten 4 Monaten sexuellen Kontakt mit Partner/innen gehabt, die sich in HIV-HCV-HBV-Risikoländern für mehr als 6 Monate aufgehalten haben oder dort Bluttransfusionen erhalten haben?",
           "_text": {
             "extension": [
               {
@@ -2091,7 +2724,7 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Haben Sie in den letzten 4 Monaten sexuellen Kontakt mit Partner/innen gehabt, die sich in HIV-HCV-HBV-Risikoländern für mehr als 6 Monate aufgehalten haben oder dort Bluttransfusionen erhalten haben?"
+                    "valueString": "36. Haben Sie in den letzten 4 Monaten sexuellen Kontakt mit Partner/innen gehabt, die sich in HIV-HCV-HBV-Risikoländern für mehr als 6 Monate aufgehalten haben oder dort Bluttransfusionen erhalten haben?"
                   }
                 ]
               }
@@ -2104,7 +2737,7 @@
               "type": "date",
               "repeats": false,
               "required": false,
-              "text": "Datum der Rückkehr des/r Partners/in:",
+              "text": "36.1 Datum der Rückkehr des/r Partners/in:",
               "_text": {
                 "extension": [
                   {
@@ -2116,7 +2749,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Datum der Rückkehr des/r Partners/in:"
+                        "valueString": "36.1 Datum der Rückkehr des/r Partners/in:"
                       }
                     ]
                   }
@@ -2140,7 +2773,7 @@
           "type": "choice",
           "repeats": false,
           "required": false,
-          "text": "Nur Männer: Jemals sexueller Kontakt unter Männern, sexueller Kontakt unter Männern in den letzten 12 Monaten",
+          "text": "37. Nur Männer: Jemals sexueller Kontakt unter Männern, sexueller Kontakt unter Männern in den letzten 12 Monaten",
           "_text": {
             "extension": [
               {
@@ -2152,45 +2785,81 @@
                   },
                   {
                     "url": "content",
-                    "valueString": "Nur Männer: Jemals sexueller Kontakt unter Männern, sexueller Kontakt unter Männern in den letzten 12 Monaten"
-                  }
-                ]
-              }
-            ]
-          },
-          "answerValueSet": "#YES-NO-Valueset"
-        },
-        {
-          "linkId": "Q38",
-          "type": "choice",
-          "repeats": false,
-          "required": false,
-          "text": "Nur Frauen: Waren Sie jemals schwanger?",
-          "_text": {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/translation",
-                "extension": [
-                  {
-                    "url": "lang",
-                    "valueCode": "de"
-                  },
-                  {
-                    "url": "content",
-                    "valueString": "Nur Frauen: Waren Sie jemals schwanger?"
+                    "valueString": "37. Nur Männer: Jemals sexueller Kontakt unter Männern, sexueller Kontakt unter Männern in den letzten 12 Monaten"
                   }
                 ]
               }
             ]
           },
           "answerValueSet": "#YES-NO-Valueset",
+          "enableWhen": [
+            {
+              "question": "P5",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://hl7.org/fhir/ValueSet/administrative-gender",
+                "code": "male"
+              }
+            },
+            {
+              "question": "P5",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://hl7.org/fhir/ValueSet/administrative-gender",
+                "code": "other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "Q38",
+          "type": "choice",
+          "repeats": false,
+          "required": false,
+          "text": "38. Nur Frauen: Waren Sie jemals schwanger?",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "de"
+                  },
+                  {
+                    "url": "content",
+                    "valueString": "38. Nur Frauen: Waren Sie jemals schwanger?"
+                  }
+                ]
+              }
+            ]
+          },
+          "answerValueSet": "#YES-NO-Valueset",
+          "enableWhen": [
+            {
+              "question": "P5",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://hl7.org/fhir/ValueSet/administrative-gender",
+                "code": "female"
+              }
+            },
+            {
+              "question": "P5",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://hl7.org/fhir/ValueSet/administrative-gender",
+                "code": "other"
+              }
+            }
+          ],
           "item": [
             {
               "linkId": "Q38.1",
               "type": "date",
               "repeats": false,
               "required": false,
-              "text": "Falls ja, wann zuletzt?",
+              "text": "38.1 Falls ja, wann zuletzt?",
               "_text": {
                 "extension": [
                   {
@@ -2202,7 +2871,7 @@
                       },
                       {
                         "url": "content",
-                        "valueString": "Falls ja, wann zuletzt?"
+                        "valueString": "38.1 Falls ja, wann zuletzt?"
                       }
                     ]
                   }
@@ -2218,41 +2887,49 @@
                   }
                 }
               ]
-            },
-            {
-              "linkId": "Q38.2",
-              "type": "choice",
-              "repeats": false,
-              "required": false,
-              "text": "Haben Sie vor dem 01.01.1986 Hormonspritzen zur Behandlung von Unfruchtbarkeit erhalten?",
-              "_text": {
+            }
+          ]
+        },
+        {
+          "linkId": "Q39",
+          "type": "choice",
+          "repeats": false,
+          "required": false,
+          "text": "39. Nur Frauen: Haben Sie vor dem 01.01.1986 Hormonspritzen zur Behandlung von Unfruchtbarkeit erhalten?",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/translation",
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
-                    "extension": [
-                      {
-                        "url": "lang",
-                        "valueCode": "de"
-                      },
-                      {
-                        "url": "content",
-                        "valueString": "Haben Sie vor dem 01.01.1986 Hormonspritzen zur Behandlung von Unfruchtbarkeit erhalten?"
-                      }
-                    ]
+                    "url": "lang",
+                    "valueCode": "de"
+                  },
+                  {
+                    "url": "content",
+                    "valueString": "39. Nur Frauen: Haben Sie vor dem 01.01.1986 Hormonspritzen zur Behandlung von Unfruchtbarkeit erhalten?"
                   }
                 ]
-              },
-              "enableWhen": [
-                {
-                  "question": "Q1",
-                  "operator": "=",
-                  "answerCoding": {
-                    "system": "http://snomed.info/sct",
-                    "code": "373066001"
-                  }
-                }
-              ],
-              "answerValueSet": "#YES-NO-Valueset"
+              }
+            ]
+          },
+          "answerValueSet": "#YES-NO-Valueset",
+          "enableWhen": [
+            {
+              "question": "P5",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://hl7.org/fhir/ValueSet/administrative-gender",
+                "code": "female"
+              }
+            },
+            {
+              "question": "P5",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://hl7.org/fhir/ValueSet/administrative-gender",
+                "code": "other"
+              }
             }
           ]
         }

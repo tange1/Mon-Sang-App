@@ -1,5 +1,5 @@
 {
-  "name": "mon-sang-app-5",
+  "name": "mon-sang-app",
   "version": "0.0.1",
   "description": "A Blood Donation App",
   "productName": "MonSang App",
@@ -17,6 +17,7 @@
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.6.5",
     "i18n": "^0.15.1",
+    "qrious": "^4.0.2",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",
     "vue-i18n": "9.2.2",

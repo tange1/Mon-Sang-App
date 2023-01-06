@@ -87,6 +87,48 @@
             </q-card>
           </q-expansion-item>
 
+          <q-expansion-item expand-separator icon="home" label="Wohnort">
+            <q-card>
+              <q-card-section>
+                <div class="row">
+                  <div class="col">
+                    Strasse
+                  </div>
+                  <div class="col">
+                    Beispielstrasse
+                  </div>
+                </div>
+                <q-separator horizontal spaced />
+                <div class="row">
+                  <div class="col">
+                    Strassennummer
+                  </div>
+                  <div class="col">
+
+                  </div>
+                </div>
+                <q-separator horizontal spaced />
+                <div class="row">
+                  <div class="col">
+                    Postleitzahl
+                  </div>
+                  <div class="col">
+
+                  </div>
+                </div>
+                <q-separator horizontal spaced />
+                <div class="row">
+                  <div class="col">
+                    Ort
+                  </div>
+                  <div class="col">
+
+                  </div>
+                </div>
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+
           <q-expansion-item expand-separator icon="bloodtype" label="Blutgruppe">
             <q-card>
               <q-card-section>

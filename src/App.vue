@@ -1,18 +1,20 @@
 <template>
   <router-view v-if="isLoggedIn" />
-  <!--LoginMock v-else :acceptedLogins="logins" :onLogin="login" @message="displayMessage" :processing="processingLogin" /-->
-  <LoginMock v-else :acceptedLogins="logins" :onLogin="login" @message="displayMessage" />
+  <LoginMock v-else :acceptedLogins="logins" :onLogin="login" />
+  <!--LoginMock v-else :acceptedLogins="logins" :onLogin="login" @message="displayMessage" /-->
+
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { Notify } from 'quasar';
+//import { Notify } from 'quasar';
 import LoginMock from './components/LoginMock.vue';
-import { LoginType, UIMessage, UIMessageType } from './model/interfaces';
+import { LoginType } from './model/interfaces';
 import ACCEPTED_LOGINS from './assets/login/acceptedLogins.json';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 const toasts: Function[] = [];
+//const toasts = new Array<() => void>();
 
 export default defineComponent({
   name: 'App',
@@ -26,18 +28,9 @@ export default defineComponent({
   },
   mounted() {
     this.isLoggedIn = this.$store.getUser() !== undefined;
+
   },
   methods: {
-    /**
-    login(user: LoginType): void {
-      this.isLoggedIn = user !== undefined;
-      this.$store.setUser(user);
-      // hide toasts
-      toasts.forEach((toast) => {
-        toast();
-      });
-    },
-    */
     login(user: LoginType): void {
       // hide toasts
       this.processingLogin = true;
@@ -53,11 +46,11 @@ export default defineComponent({
           })
           .then((patientResources) => {
             if (patientResources.length === 0) {
-              this.displayMessage({
-                type: UIMessageType.ERROR,
-                title: 'Gewöhnlicher Fehler',
-                text: 'Es konnten keine passenden Daten im EPD Playground',
-              });
+              //this.displayMessage({
+              //type: UIMessageType.ERROR,
+              //title: 'Gewöhnlicher Fehler',
+              //text: 'Es konnten keine passenden Daten im EPD Playground',
+              //});
               console.warn(
                 'Es wurde keinen passenden Patienten für ' +
                 user.givenName +
@@ -73,38 +66,53 @@ export default defineComponent({
             }
           })
           .catch((error) => {
-            this.displayMessage({
-              type: UIMessageType.ERROR,
-              title: 'Gewöhnlicher Fehler',
-              text: 'Es konnte keine passenden Daten im EPD Playground',
-            });
+            //this.displayMessage({
+            //type: UIMessageType.ERROR,
+            //title: 'Gewöhnlicher Fehler',
+            //text: 'Es konnte keine passenden Daten im EPD Playground',
+            //});
             console.warn('Something went wrong logging in', error);
           });
       }
     },
 
-    displayMessage(message: UIMessage) {
-      switch (message.type) {
-        case UIMessageType.SMS:
-          toasts.push(
-            Notify.create({
-              message: message.title,
-              caption: message.text,
-              position: 'top',
-            })
-          );
-          break;
-        case UIMessageType.ERROR:
-          toasts.push(
-            Notify.create({
-              message: message.title,
-              caption: message.text,
-              type: 'negative',
-            })
-          );
-          console.warn('ERROR - ' + message.title + ': ' + message.text);
-      }
-    },
+
+    //displayMessage(message: UIMessage) {
+    //alert(message.text)
+    /**switch (message.type) {
+      case UIMessageType.SMS:
+        toasts.push(
+          Notify.create({
+            message: message.title,
+            caption: message.text,
+            position: 'top',
+          })
+        );
+        break;
+      case UIMessageType.ERROR:
+        toasts.push(
+          Notify.create({
+            message: message.title,
+            caption: message.text,
+            type: 'negative',
+          })
+        );
+        console.warn('ERROR - ' + message.title + ': ' + message.text);
+    }*/
+    /**switch (message.type) {
+      case UIMessageType.SMS:
+        toasts.push(
+          Notify.create({
+            message: message.title,
+            caption: message.text,
+            position: 'top-right',
+          })
+        );
+        break;
+      case UIMessageType.ERROR:
+        console.warn('ERROR - ' + message.title + ': ' + message.text);
+    }
+  },*/
   },
 });
 </script>

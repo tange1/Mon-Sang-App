@@ -25,8 +25,8 @@
     "gender": "weiblich",
     "address": {
       "street": "Oberdorfstrasse",
-      "street number": "3",
-      "postal code": "4001",
+      "streetNumber": "3",
+      "postalCode": "4001",
       "place": "Basel"
     },
     "donationNumber": "1234567",
@@ -37,8 +37,8 @@
     "username": "matteo@mail.li",
     "password": "test",
     "phone": "076 111 22 33",
-    "givenName": "Donald",
-    "familyName": "Wyss"
+    "givenName": "Matteo",
+    "familyName": "Lecomte"
   },
   {
     "username": "donald@wyss.ch",

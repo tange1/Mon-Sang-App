@@ -43,8 +43,12 @@
               Apps, die zu statistischen Auswertungen klinischer oder epidemiologischer Daten verwendet werden. Ebenso
               sind elektronische Patientenregister und Informationsplattformen keine Medizinprodukte.
             </p>
+            <q-separator inset></q-separator>
             <p>
-              Quelle: https://www.spectra-online.ch/de/spectra/themen/wann-ist-eine-app-ein-medizinprodukt-719-10.html
+              Quelle:
+            </p>
+            <p href="https://www.spectra-online.ch/de/spectra/themen/wann-ist-eine-app-ein-medizinprodukt-719-10.html">
+              Spectra-Online.ch/
             </p>
           </q-card-section>
         </q-card>

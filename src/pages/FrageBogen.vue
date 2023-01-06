@@ -13,13 +13,28 @@
         <q-btn :disabled="!qData" @click="qData?.resetResponse()" class="full-width" color="primary">Antworten
           zurücksetzen</q-btn>
         <q-separator inset></q-separator>
-        <q-btn @click="setAnswers" class="full-width" color="primary">Antworten speichern</q-btn>
+        <q-btn @click="setAnswers, confirm = true" class="full-width" color="primary">Antworten
+          speichern</q-btn>
       </q-card-section>
+      <!--q-dialog v-model="confirm" persistent>
+        <q-card>
+          <q-dialog v-model="confirm" persistent>
+            <q-card class="my-card">
+              <q-card-section class="bg-secondary text-white">
+                <q-avatar size="lg" class="align-center" icon="error_outline" color="primary"
+                  text-color="white"></q-avatar>
 
-      <!--button :disabled="!qData" @click="qData?.resetResponse()">
-        zurücksetzen
-      </button>
-      <button @click="setAnswers">Antworten speichern</button-->
+                <div class="text-subtitle1">Einverständniserklärung und Bestätigung</div>
+                <p>Diese Dokumente wirst Du vor Ort vor der Spende unterschreiben.</p>
+              </q-card-section>
+              <q-card-actions align="around">
+                <q-btn flat @click="$router.push('/home')">Abschliessen</q-btn>
+                <q-btn flat v-close-popup>Abbrechen</q-btn>
+              </q-card-actions>
+            </q-card>
+          </q-dialog>
+        </q-card>
+      </q-dialog-->
 
       <!-- RESPONSE MODAL-->
       <div v-if="response" class="modal" id="response-modal">
@@ -34,11 +49,13 @@
         <button @click="response = undefined">schliessen</button>
       </div>
 
-      <!--div v-if="response" class="modal" id="response-modal">
-        <p>Hier ist die QuestionnaireResponse-Resource:</p>
-        <textarea v-model="response"></textarea>
-        <button @click="response = undefined">schliessen</button>
-      </div-->
+      <q-input v-model="qrLink" label="Input value to generate"
+        :rules="[(val) => !!val || 'Link field cannot be empty']" />
+      <br />
+      <q-btn color="primary" label="Generate QR Code" @click="generateQrCode" />
+      <canvas id="qr-code">
+
+      </canvas>
     </q-card>
   </q-page>
 </template>
@@ -47,11 +64,12 @@
 import { defineComponent } from 'vue';
 import QuestionComponent from '../components/Question.vue';
 import NEUSPENDER from '../assets/questionnaires/neuspender.json';
-import { Questionnaire, Bundle, BundleType, Patient, QuestionnaireResponse, ContactPointUse, ContactPointSystem, ContactPoint, HumanName, HumanNameNameUse, code, PatientAdministrativeGender, AddressUse, AddressType, Address, IdentifierUse } from '@i4mi/fhir_r4';
+import { Questionnaire, Bundle, BundleType, Patient, QuestionnaireResponse, ContactPointUse, ContactPointSystem, ContactPoint, HumanName, HumanNameNameUse, code, PatientAdministrativeGender, AddressUse, AddressType, Address, Identifier, IdentifierUse } from '@i4mi/fhir_r4';
 import { IAnswerOption, QuestionnaireData } from '@i4mi/fhir_questionnaire';
 import EpdPlaygroundUtils, { ITI_93_ACTION } from '@i4mi/mhealth-proto-components';
 import { Iti65DocumentBundle, Iti65Metadata, SystemCodeExtension } from '@i4mi/mhealth-proto-components';
-import { identifier, Identifier } from '@babel/types';
+import QRious from 'qrious';
+//import { identifier, Identifier } from '@babel/types';
 //import { response } from 'express';
 //import { QPage, QCard, QSeparator, QCardSection, QBtn, QPopupProxy, QBanner, QIcon, date } from 'quasar';
 
@@ -65,6 +83,8 @@ export default defineComponent({
       qData: new QuestionnaireData(NEUSPENDER as Questionnaire, ['de']),
       response: undefined as QuestionnaireResponse | undefined,
       categorySelect: undefined as SystemCodeExtension | undefined,
+      confirm: false,
+      qrLink: '',
     };
   },
 
@@ -87,12 +107,13 @@ export default defineComponent({
     // Date of Birth
     const dateOfBirthQuestion = this.qData.findQuestionById('P4', this.qData.getQuestions());
     if (dateOfBirthQuestion) {
-      this.qData.updateQuestionAnswers(dateOfBirthQuestion, { answer: { de: '03.01.1927' }, code: '03.01.1927' } as IAnswerOption);
+      this.qData.updateQuestionAnswers(dateOfBirthQuestion, { answer: { de: '1927-01-03' }, code: '1927-01-03' } as IAnswerOption);
     }
 
     // Gender
     const genderQuestion = this.qData.findQuestionById('P5', this.qData.getQuestions());
     if (genderQuestion) {
+      //this.qData.updateQuestionAnswers(genderQuestion, { answer: { de: 'weiblich' }, code: { valueCoding: { system: 'http://hl7.org/fhir/ValueSet/administrative-gender', code: 'female' } } } as IAnswerOption);
       this.qData.updateQuestionAnswers(genderQuestion, { answer: { de: 'weiblich' }, code: 'female' } as IAnswerOption);
     }
 
@@ -137,10 +158,31 @@ export default defineComponent({
     if (emailQuestion) {
       this.qData.updateQuestionAnswers(emailQuestion, { answer: { de: 'laura@wyss.ch' }, code: 'laura@wyss.ch' } as IAnswerOption);
     }
-    // Q1
-    const Q1Question = this.qData.findQuestionById('Q1', this.qData.getQuestions());
-    if (Q1Question) {
-      this.qData.updateQuestionAnswers(Q1Question, { answer: { de: 'Ja' }, code: '373066001' } as IAnswerOption);
+
+    // Q2
+    const Q2Question = this.qData.findQuestionById('Q2', this.qData.getQuestions());
+    if (Q2Question) {
+      this.qData.updateQuestionAnswers(Q2Question, { answer: { de: 'Ja' }, code: { valueCoding: { system: 'http://snomed.info/sct', code: '373066001' } } } as IAnswerOption);
+    }
+    // Q20
+    const Q20Question = this.qData.findQuestionById('Q20', this.qData.getQuestions());
+    if (Q20Question) {
+      this.qData.updateQuestionAnswers(Q20Question, { answer: { de: 'Nein' }, code: { valueCoding: { system: 'http://snomed.info/sct', code: '373067005' } } } as IAnswerOption);
+    }
+    // Q22
+    const Q22Question = this.qData.findQuestionById('Q22', this.qData.getQuestions());
+    if (Q22Question) {
+      this.qData.updateQuestionAnswers(Q22Question, { answer: { de: 'Nein' }, code: { valueCoding: { system: 'http://snomed.info/sct', code: '373067005' } } } as IAnswerOption);
+    }
+    // Q25
+    const Q25Question = this.qData.findQuestionById('Q25', this.qData.getQuestions());
+    if (Q25Question) {
+      this.qData.updateQuestionAnswers(Q25Question, { answer: { de: 'Nein' }, code: { valueCoding: { system: 'http://snomed.info/sct', code: '373067005' } } } as IAnswerOption);
+    }
+    // Q26
+    const Q26Question = this.qData.findQuestionById('Q26', this.qData.getQuestions());
+    if (Q26Question) {
+      this.qData.updateQuestionAnswers(Q26Question, { answer: { de: 'Ja' }, code: { valueCoding: { system: 'http://snomed.info/sct', code: '373066001' } } } as IAnswerOption);
     }
   },
 
@@ -260,7 +302,6 @@ export default defineComponent({
         patientResource.address[addressCityIndex] = cityddress
       };
 
-
       // ContactPoint
       if (!patientResource.telecom) patientResource.telecom = [];
       // Telefon Privat
@@ -316,22 +357,6 @@ export default defineComponent({
         patientResource.telecom[emailIndex] = emailContactPoint
       };
 
-      // Identifier Fragebogen
-      // Q1
-      /**const q1 = this.qData.getQuestions().find(question => question.id === 'Q1')?.selectedAnswers[0].valueString;
-      const Q1Question: Identifier = {
-        use: IdentifierUse.TEMP,
-        value: q1,
-        //type: IdentifierType.code
-      };
-      const q1QuestionIndex = patientResource.identifier.findIndex(identifier => identifier.use === IdentifierUse.TEMP);
-      if (q1QuestionIndex === -1) {
-        patientResource.identifier.push(q1QuestionIndex)
-      } else {
-        patientResource.identifier[q1QuestionIndex] = Q1Question
-      };
-      */
-
       // Adds or edit patient data
       this.$epdUtils.useITI93(this.$store.getPatient(), ITI_93_ACTION.UPDATE)
 
@@ -376,6 +401,19 @@ export default defineComponent({
         .then((result) => console.log(JSON.stringify(result)))
         .catch((error) => console.error(error));
     },
+
+    generateQrCode() {
+      if (this.qrLink != '' && this.qrLink != '\n') {
+        new QRious({
+          level: 'H',
+          padding: 25,
+          size: 300,
+          element: document.getElementById('qr-code'),
+          value: this.qrLink,
+        });
+      }
+    }
+
   },
 });
 </script>
